@@ -1,0 +1,47 @@
+2017/08/17 12:41:06 [error] 8340#10336: *1 CreateFile() "D:\softIinstallPackage\nginx\nginx-1.12.1/html/favicon.ico" failed (2: The system cannot find the file specified), client: 10.88.20.84, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "10.88.20.84", referrer: "http://10.88.20.84/"
+2017/08/17 12:49:58 [emerg] 11776#8236: bind() to 0.0.0.0:8080 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2017/08/17 12:50:53 [emerg] 10896#5172: bind() to 0.0.0.0:8080 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2017/08/17 12:57:46 [emerg] 1052#4088: bind() to 0.0.0.0:8080 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2017/08/17 13:09:49 [emerg] 316#12256: unknown directive "rlogin" in D:\softIinstallPackage\nginx\nginx-1.12.1/conf/nginx.conf:45
+2017/08/17 13:31:10 [error] 8340#10336: *22 CreateFile() "D:\softIinstallPackage\nginx\nginx-1.12.1/html/favicon.ico" failed (2: The system cannot find the file specified), client: 10.88.20.84, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "10.88.20.84", referrer: "http://10.88.20.84/"
+2017/08/17 13:35:28 [notice] 5872#4356: signal process started
+2017/08/17 13:37:36 [notice] 3936#9500: signal process started
+2017/08/17 13:37:50 [error] 536#11880: *35 CreateFile() "D:\softIinstallPackage\nginx\nginx-1.12.1/html/favicon.ico" failed (2: The system cannot find the file specified), client: 10.88.20.84, server: , request: "GET /favicon.ico HTTP/1.1", host: "10.88.20.84:8888", referrer: "http://10.88.20.84:8888/"
+2017/08/17 13:39:09 [notice] 1080#1836: signal process started
+2017/08/17 13:42:53 [error] 7752#4212: *46 CreateFile() "D:\softIinstallPackage\nginx\nginx-1.12.1/html/sso/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: , request: "GET /favicon.ico HTTP/1.1", host: "www.ssoclient.com:8888", referrer: "http://www.ssoclient.com:8888/"
+2017/08/17 13:43:19 [notice] 11228#4052: signal process started
+2017/08/17 13:44:06 [error] 8764#5024: *58 CreateFile() "D:\softIinstallPackage\nginx\nginx-1.12.1/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "www.ssoclient.com", referrer: "http://www.ssoclient.com/"
+2017/08/17 13:48:03 [notice] 5104#10528: signal process started
+2017/08/17 13:48:46 [notice] 11820#8980: signal process started
+2017/08/17 13:48:53 [error] 4564#9584: *65 WSARecv() failed (10054: An existing connection was forcibly closed by the remote host) while reading response header from upstream, client: 127.0.0.1, server: www.ssoclient.com, request: "GET / HTTP/1.1", upstream: "http://14.215.177.38:80/", host: "www.ssoclient.com:8889"
+2017/08/17 13:48:53 [error] 4564#9584: *65 WSARecv() failed (10054: An existing connection was forcibly closed by the remote host) while reading response header from upstream, client: 127.0.0.1, server: www.ssoclient.com, request: "GET / HTTP/1.1", upstream: "http://14.215.177.37:80/", host: "www.ssoclient.com:8889"
+2017/08/17 13:48:54 [error] 4564#9584: *65 no live upstreams while connecting to upstream, client: 127.0.0.1, server: www.ssoclient.com, request: "GET /favicon.ico HTTP/1.1", upstream: "http://my_server/favicon.ico", host: "www.ssoclient.com:8889", referrer: "http://www.ssoclient.com:8889/"
+2017/08/17 14:06:38 [notice] 11208#6920: signal process started
+2017/08/17 14:06:45 [error] 3052#2156: *69 WSARecv() failed (10054: An existing connection was forcibly closed by the remote host) while reading response header from upstream, client: 127.0.0.1, server: www.ssoclient.com, request: "GET /my HTTP/1.1", upstream: "http://14.215.177.38:80/", host: "www.ssoclient.com:8889"
+2017/08/17 14:06:46 [error] 3052#2156: *69 WSARecv() failed (10054: An existing connection was forcibly closed by the remote host) while reading response header from upstream, client: 127.0.0.1, server: www.ssoclient.com, request: "GET /my HTTP/1.1", upstream: "http://14.215.177.37:80/", host: "www.ssoclient.com:8889"
+2017/08/17 14:06:46 [error] 3052#2156: *69 CreateFile() "D:\softIinstallPackage\nginx\nginx-1.12.1/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: www.ssoclient.com, request: "GET /favicon.ico HTTP/1.1", host: "www.ssoclient.com:8889", referrer: "http://www.ssoclient.com:8889/my"
+2017/08/17 14:07:56 [notice] 8232#11512: signal process started
+2017/08/17 14:07:58 [notice] 9140#10696: signal process started
+2017/08/17 14:08:01 [notice] 11096#5956: signal process started
+2017/08/17 14:09:17 [notice] 5800#6576: signal process started
+2017/08/17 14:09:21 [error] 5968#3692: *80 CreateFile() "D:\softIinstallPackage\nginx\nginx-1.12.1/html/jquery.min.js" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: www.ssoclient.com, request: "GET /jquery.min.js HTTP/1.1", host: "www.ssoclient.com:8889", referrer: "http://www.ssoclient.com:8889/my"
+2017/08/17 14:09:21 [error] 5968#3692: *80 CreateFile() "D:\softIinstallPackage\nginx\nginx-1.12.1/html/login.js" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: www.ssoclient.com, request: "GET /login.js HTTP/1.1", host: "www.ssoclient.com:8889", referrer: "http://www.ssoclient.com:8889/my"
+2017/08/17 14:10:42 [notice] 4340#556: signal process started
+2017/08/17 14:10:47 [error] 3308#5404: *89 CreateFile() "D:\softIinstallPackage\nginx\nginx-1.12.1/html/sso/my" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: , request: "GET /my HTTP/1.0", host: "www.ssoclient.com:8889"
+2017/08/17 14:15:41 [emerg] 6180#3804: invalid host in upstream "www.ssoclient.com:8080/demo-web/index.doRedirect" in D:\softIinstallPackage\nginx\nginx-1.12.1/conf/nginx.conf:130
+2017/08/17 14:19:52 [notice] 12100#3124: signal process started
+2017/08/17 14:22:51 [notice] 4396#6644: signal process started
+2017/08/17 14:25:28 [notice] 11804#8480: signal process started
+2017/08/17 14:37:55 [notice] 10036#11068: signal process started
+2017/08/17 14:38:17 [notice] 3036#8148: signal process started
+2017/08/17 14:38:17 [error] 3036#8148: CreateFile() "D:\softIinstallPackage\nginx\nginx-1.12.1/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2017/08/17 14:41:56 [emerg] 14872#14876: unknown directive "E:
+ginx-1.2.3>nginx" in D:\softIinstallPackage\nginx\nginx-1.12.1/conf/nginx.conf:124
+2017/08/17 14:42:26 [notice] 2880#5296: signal process started
+2017/08/17 14:55:28 [error] 9716#9780: *12 CreateFile() "D:\softIinstallPackage\nginx\nginx-1.12.1/html/login" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /login HTTP/1.1", host: "www.cas.com"
+2017/08/17 14:55:28 [error] 9716#9780: *12 CreateFile() "D:\softIinstallPackage\nginx\nginx-1.12.1/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "www.cas.com", referrer: "http://www.cas.com/login"
+2017/08/17 15:26:08 [notice] 12500#12612: signal process started
+2017/08/17 15:26:10 [notice] 1340#14568: signal process started
+2017/09/11 13:31:22 [notice] 3040#5740: signal process started
+2017/09/11 13:31:53 [error] 7976#10620: *2 CreateFile() "D:\softIinstallPackage\nginx\nginx-1.12.1/html/sso/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: , request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1:8888", referrer: "http://127.0.0.1:8888/"
+2017/09/11 13:33:24 [notice] 10108#8656: signal process started
