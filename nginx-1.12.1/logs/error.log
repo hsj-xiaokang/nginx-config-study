@@ -45,3 +45,14 @@ ginx-1.2.3>nginx" in D:\softIinstallPackage\nginx\nginx-1.12.1/conf/nginx.conf:1
 2017/09/11 13:31:22 [notice] 3040#5740: signal process started
 2017/09/11 13:31:53 [error] 7976#10620: *2 CreateFile() "D:\softIinstallPackage\nginx\nginx-1.12.1/html/sso/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: , request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1:8888", referrer: "http://127.0.0.1:8888/"
 2017/09/11 13:33:24 [notice] 10108#8656: signal process started
+2017/09/11 13:38:31 [notice] 4512#3464: signal process started
+2017/09/11 13:45:45 [notice] 7888#4304: signal process started
+2017/09/11 13:46:10 [error] 184#4368: *8 CreateFile() "D:\softIinstallPackage\nginx\nginx-config-study\nginx-1.12.1/html/sso/demo-web/test/index.doRedirect" failed (3: The system cannot find the path specified), client: 127.0.0.1, server: , request: "GET /demo-web/test/index.doRedirect HTTP/1.0", host: "www.ssoclient.com:8889"
+2017/09/11 13:46:10 [error] 184#4368: *10 CreateFile() "D:\softIinstallPackage\nginx\nginx-config-study\nginx-1.12.1/html/sso/demo-web/test/index.doRedirectfavicon.ico" failed (3: The system cannot find the path specified), client: 127.0.0.1, server: , request: "GET /demo-web/test/index.doRedirectfavicon.ico HTTP/1.0", host: "www.ssoclient.com:8889", referrer: "http://www.ssoclient.com:8889/"
+2017/09/11 13:48:59 [notice] 7992#11336: signal process started
+2017/09/11 13:49:08 [error] 2944#6380: *11 WSARecv() failed (10054: An existing connection was forcibly closed by the remote host) while reading response header from upstream, client: 127.0.0.1, server: www.ssoclient.com, request: "GET / HTTP/1.1", upstream: "http://115.239.210.27:80/", host: "www.ssoclient.com:8889"
+2017/09/11 13:49:08 [error] 2944#6380: *11 WSARecv() failed (10054: An existing connection was forcibly closed by the remote host) while reading response header from upstream, client: 127.0.0.1, server: www.ssoclient.com, request: "GET / HTTP/1.1", upstream: "http://115.239.211.112:80/", host: "www.ssoclient.com:8889"
+2017/09/11 13:49:36 [emerg] 4304#9036: invalid URL prefix in D:\softIinstallPackage\nginx\nginx-config-study\nginx-1.12.1/conf/nginx.conf:156
+2017/09/11 13:49:45 [notice] 11908#10904: signal process started
+2017/09/11 14:11:59 [notice] 2076#4848: signal process started
+2017/09/11 14:16:31 [notice] 4224#212: signal process started
