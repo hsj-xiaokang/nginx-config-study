@@ -46,7 +46,7 @@ public class RestPersonController {
         		BigDecimal b3 = BigDecimal.valueOf(1.2580);
         		if(b1.compareTo(b3) == 0){
         			jb.put("1.258 == 1.2580", "1.258 == 1.2580");
-        		}     
+        		}      
         return  jb;
     }
 }
