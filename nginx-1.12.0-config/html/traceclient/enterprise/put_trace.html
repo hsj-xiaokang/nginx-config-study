@@ -1,0 +1,77 @@
+<!-- 会员首页 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <script>
+      var _hmt = _hmt || [];
+      (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?1b06a7889f268c3641d916f8aa6584b2";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+      })();
+  </script>
+  <script src="../common/js/set_timeout.js"></script>
+  <title>农产品追溯平台</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .put-trace-wrapper{
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20%;
+      text-align: center;
+    }
+    .put-trace-wrapper span{
+      display: block;
+    }
+    .download-zhuisuma{
+      margin-top: 20px;
+      cursor: pointer;
+      color: #15b2ec;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="put-trace-wrapper" >
+    <img src="" />
+    <span></span>
+    <div class="download-zhuisuma">下载追溯码</div>
+  </div>
+
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../common/js/commjs.js"></script>
+  <script>
+    $(function () {
+        $.ajax({
+            url: putTrace,
+            type: 'POST',
+            dataType: 'json',
+            data: {
+              operatorid: JSON.parse(sessionStorage.getItem('loginInfo')).uid,
+              lastlogincode: JSON.parse(sessionStorage.getItem('loginInfo')).lastlogincode,
+            	id: getQueryString('id')
+            },
+            success: function (data) {
+            	  console.log(data);
+                $('.put-trace-wrapper img').attr('src', data.data.twodimensioncodepath);
+                $('.put-trace-wrapper span').text('追溯码 : ' + data.data.traceno);
+			      },
+            error: function () {}
+        })
+    });
+    $('.download-zhuisuma').on('click', function () {
+      window.location.href = downZhuisu + '?operatorid=' + JSON.parse(sessionStorage.getItem('loginInfo')).uid + '&lastlogincode=' + JSON.parse(sessionStorage.getItem('loginInfo')).lastlogincode + '&id=' + getQueryString('id');
+	  });
+  </script>
+</body>
+
+</html>

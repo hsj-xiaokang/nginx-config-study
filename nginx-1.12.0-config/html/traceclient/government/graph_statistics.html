@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <script>
+      var _hmt = _hmt || [];
+      (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?1b06a7889f268c3641d916f8aa6584b2";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+      })();
+  </script>
+  <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css">
+  <link rel="stylesheet" href="../css/government/table_count.css">
+  <link rel="stylesheet" href="../css/government/government_home.css">
+  <script src="../js/include.js"></script>
+  <title>农产品追溯平台</title>
+</head>
+<body>
+  <!-- banner -->
+  <div class="top"></div>
+
+  <!-- 面包屑 -->
+  <div class="container breadcrumb-wrapper" id="breadcrumb-wrapper">
+    <ol class="breadcrumb" id="breadcrumb" >
+      <li><a href="../index.html" style="color:#333;">首页</a></li>
+      <li class="active" id="current-page">报表统计</li>
+    </ol>
+  </div>
+
+
+  <!-- 网页主体 -->
+  <div class="container-fluid page-main">
+    <div class="row">
+      <!-- 左侧菜单 -->
+      <div class="col-lg-2 col-lg-2 col-lg-12 col-lg-12 text-center page-menu">
+        <ul class="list-group" id="list-group">
+          <a class="list-group-item table-count" id="actived" href="government_home.html">报表统计</a>
+          <a class="list-group-item account-safe" href="account_safe.html">账号安全</a>
+        </ul>
+      </div>
+
+      <!-- 图形报表 -->
+      <div class="col-lg-10 col-lg-10 col-lg-12 col-lg-12 page-chart" style="padding:0;">
+        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <li>最近7天</li>
+          <li>最近30天</li>
+          <li>最近90天</li>
+          <li>最近半年</li>
+        </ul>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 cut-line" id="cut-line"><div></div></div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 chart-button">
+          <span>浏览量</span>
+          <span>企业入驻数</span>
+          <span>新增追溯档案数</span>
+          <span>新增验证档案数</span>
+        </div>
+        <!-- 报表 -->
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 chart-image">
+          <div id="canvasDiv">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../common/js/set_timeout.js"></script>
+  <script src="../js/bootstrap-datetimepicker.min.js"></script>
+  <script src="../js/bootstrap-datetimepicker.zh-CN.js"></script>
+  <script src="../js/report-forms/ichart.1.2.min.js"></script>
+  <script src="../vendor/vue/vue.js"></script>
+  <script src="../js/pagination/zxf_page.js"></script>
+  <script src="../common/js/commjs.js"></script>
+  <script src="../common/js/load_common_html.js"></script>
+  <script src="../js/government/graph_statistics.js"></script>
+</body>
+</html>

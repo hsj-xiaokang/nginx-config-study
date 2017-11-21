@@ -1,0 +1,274 @@
+/* 新建追溯档案第二个页面 */
+#basic-info-caption,#basic-info-caption02{
+    margin-bottom: 20px;
+}
+#basic-info-caption>div:first-child{
+    height: 61px;
+    background-image: url("../../img/enterprise/new_product/step1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#basic-info-caption>div:last-child{
+    height: 61px;
+    background-image: url("../../img/enterprise/new_product/step2_hui.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#basic-info-caption02>div:first-child{
+    height: 61px;
+    background-image: url("../../img/enterprise/new_product/step1_hui.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#basic-info-caption02>div:last-child{
+    height: 61px;
+    background-image: url("../../img/enterprise/new_product/step2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.product-batch-wrapper,.product-authentication-wrapper,.product-process-wrapper{
+    background-color:  #f5f7fa;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+.product-submit-wrapper{
+    background-color:  #FFF;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.product-submit-wrapper>span{
+    display: inline-block;
+    width: 107px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin: auto;
+    background-color: #15b2ec;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #FFF;
+    margin-right: 15px;
+}
+.batch-caption,.authentication-caption,.process-caption{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 20px;
+    color: #965705;
+    display: block;
+}
+.authentication-main,.process-main{
+    padding-left: 70px;
+}
+.authentication-main>div,.process-main>div{
+    margin-bottom: 20px;
+}
+.authentication-main>div>div,.process-main>div>div{
+    border: 1px dashed #CCC;
+    height: 150px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+}
+
+/* 控制图片大小显示  产品认证  */
+#authentication-main>div>div{
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* 产销过程 */
+#process-main>div>div{
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.process-main>div>div{
+    background-image: url("../../img/enterprise/image.png");
+    background-repeat: no-repeat;
+    background-position: center 30%;
+}
+.authentication-name-wrapper,.process-name-wrapper{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    color: #FFF;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.process-placeholder-wrapper{
+    margin-top: 50%;
+    color: #c2c2c2;
+}
+.process-placeholder-wrapper li {
+    list-style: none;
+}
+.back-button{
+    height: 34px;
+    line-height: 34px;
+    cursor: pointer;
+    color: #FFF;
+    background-color: #15b2ec;
+}
+/* new_product2.html 页面 */
+/* 隐藏上下箭头 */
+input[type=number] {
+    -moz-appearance:textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* 生产过程 */
+.process-preview-wrapper{
+    padding-right: 0;
+    padding-left: 70px;
+    display: none;
+}
+#process-preview-wrapper>div{
+    padding:0;
+    margin-bottom: 15px;
+    background-color: #FFF;
+    padding-bottom: 20px;
+}
+.process-preview-caption{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.process-preview-caption>span:first-child{
+    display: inline-block;
+    font-size: 20px;
+}
+.process-date{
+    display: inline-block;
+    margin-left: 20px;
+    color: #666;
+}
+.process-edit{
+    display: block;
+    float: right;
+    color: #15b2ec;
+    cursor: pointer;
+}
+.image-number{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    z-index: 1;
+    width: 50px;
+    height: 25px;
+    background-color: #CCC;
+    opacity: 0.9;
+    border-radius: 11px;
+    text-align: center;
+    line-height: 25px;
+}
+.process-preview-image,.process-preview-text{
+    padding-right: 0;
+}
+
+/* 文字超出两行隐藏 */
+.process-preview-text{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+}
+.process-preview-image img{
+    width: 100%;
+    height: auto;
+}
+/* 添加按钮 */
+.process-preview-add{
+    padding-left: 70px;
+    display: none;
+}
+.preview-add-submit{
+    width: 150px;
+    height: 34px;
+    display: block;
+    text-align: center;
+    background-color: #15b2ec;
+    color: #FFF;
+    border-radius: 4px;
+    line-height: 34px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+
+}
+
+/* 添加图片主体区域 */
+.process-add-main{
+    padding-left: 70px;
+    margin-bottom: 15px;
+}
+.process-add-main>div{
+    background-color: #FFF;
+    height: 100%;
+    padding-left: 15px;
+    padding-top: 15px;
+}
+.process-image>div{
+    float: left;
+    padding-left: 0;
+    margin-bottom: 15px;
+}
+.process-image>div>div{
+    width: 100%;
+    height: 120px;
+    border: 1px dashed #CCC;
+}
+.process-image>div img{
+    width: 100%;
+    height: 120px;
+}
+.process-image>div:first-child>div{
+    background-image: url("../../img/enterprise/image.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+.process-ad-submit{
+    background-color: #15b2ec;
+    color: #FFF;
+    height: 34px;
+    width: 107px;
+    line-height: 34px;
+    text-align: center;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+.datetimepicker{
+    margin-top: 34px;
+}
+
+/* 叉叉 */
+.process-image-close{
+    position: absolute;
+    right: 18px;
+    top: 4px;
+    cursor: pointer;
+}
+/* 添加产品认证时 错误提示 *//* resourceList-error */
+.stepname-error,.workedcontent-error,.workeddate-error,.resourceList-error{
+    height: 34px;
+    line-height: 34px;
+    color: red;
+}
+.process-image-error{
+    color: red;
+}
+
+/* 按钮不可用 */
+.ban-button{
+    opacity: 0.5;
+    pointer-events: none;
+}

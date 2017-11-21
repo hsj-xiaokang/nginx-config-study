@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <script>
+      var _hmt = _hmt || [];
+      (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?1b06a7889f268c3641d916f8aa6584b2";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+      })();
+  </script>
+  <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css">
+  <link rel="stylesheet" href="../css/pagination/zxf_page.css">
+  <link rel="stylesheet" href="../css/government/table_count.css">
+  <link rel="stylesheet" href="../css/government/government_home.css">
+  <script src="../js/include.js"></script>
+  <title>农产品追溯平台</title>
+</head>
+
+<body id="page-top" class="index">
+
+  <!-- banner -->
+  <div class="top"></div>
+
+  <!-- 面包屑 -->
+  <div class="container breadcrumb-wrapper" id="breadcrumb-wrapper">
+    <ol class="breadcrumb" id="breadcrumb" >
+      <li><a href="../index.html" style="color:#333;">首页</a></li>
+      <li class="active" id="current-page">报表统计</li>
+    </ol>
+  </div>
+
+  <!-- 网页主体 -->
+  <div class="container-fluid page-main">
+    <div class="row">
+      <!-- 左侧菜单 -->
+      <div class="col-lg-2 col-lg-2 col-lg-12 col-lg-12 text-center page-menu">
+        <ul class="list-group" id="list-group">
+          <a class="list-group-item table-count" id="actived" href="government_home.html">报表统计</a>
+          <a class="list-group-item account-safe" href="account_safe.html">账号安全</a>
+        </ul>
+      </div>
+
+      <!-- 右侧 -->
+      <div class="col-lg-10 col-lg-10 col-lg-12 col-lg-12 page-table">
+
+        <!-- 4个板块 -->
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 caption-wrapper">
+
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 page-table01">
+            <div>
+              <div class="now-wrapper">今日<span class="now"></span></div>
+              <div class="yesterday-wrapper">昨日<span class="yesterday"></span></div>
+            </div>
+            <div class="page-table-foot caption-icon" data-type="1">
+              浏览量&nbsp;(&nbsp;PV&nbsp;)
+              <i class="glyphicon glyphicon-expand government-icon"></i>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 page-table02">
+            <div>
+              <div class="now-wrapper">今日<span class="now"></span></div>
+              <div class="yesterday-wrapper">昨日<span class="yesterday"></span></div>
+            </div>
+            <div class="page-table-foot caption-icon" data-type="2">
+              企业入驻数
+              <i class="glyphicon glyphicon-expand government-icon"></i>
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 page-table03">
+            <div>
+              <div class="now-wrapper">今日<span class="now"></span></div>
+              <div class="yesterday-wrapper">昨日<span class="yesterday"></span></div>
+            </div>
+            <div class="page-table-foot caption-icon" data-type="3">
+              新增追溯档案数
+              <i class="glyphicon glyphicon-expand government-icon"></i>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 page-table04">
+            <div>
+              <div class="now-wrapper">今日<span class="now"></span></div>
+              <div class="yesterday-wrapper">昨日<span class="yesterday"></span></div>
+            </div>
+            <div class="page-table-foot caption-icon" data-type="4">
+              新增验证档案数
+              <i class="glyphicon glyphicon-expand government-icon"></i>
+            </div>
+          </div>
+
+        </div>
+
+
+
+
+        <!-- 搜索块 -->
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 search-wrapper">
+          <form class="form-inline" id="form-wrapper">
+            <div class="form-group">
+              <label>产品生产地</label>
+              <select class="form-control address-province">
+                <option value="">--请选择--</option>
+              </select>
+              <select class="form-control address-city">
+                <option value="">--请选择--</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>产品类型</label>
+              <select class="form-control product-type"></select>
+            </div>
+            <div class="form-group">
+              <label>有无验证码</label>
+              <select class="form-control security-code"></select>
+            </div>
+            <div class="form-group">
+              <label>发布时间</label>
+              <input type="text" class="form-control" id="start" placeholder="起止时间"/>
+                -
+              <input type="text" class="form-control" id="end" placeholder="截止时间"/>
+            </div>
+            <div class="form-group">
+              <label>排列方式</label>
+              <select class="form-control sort-way"></select>
+            </div>
+            <div class="form-group">
+              <label>企业名称</label>
+              <input class="form-control company-name" type="text"/>
+            </div>
+            <div class="form-group" id='button-wrapper'>
+              <span @click="clickSearch" class="search">查询</span>
+              <span @click="clickClear" class="clear-option">清除条件</span>
+              <span @click="clickOut" class="table-out">导出</span>
+            </div>
+            <!-- 检索结果 -->
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group trace-number-wrapper" style="padding:0;">
+              <div>检索结果</div>
+              <div>
+                <div class="yuan yuan01"></div>
+                <div>企业数&nbsp;:&nbsp;<div class="enterpriseQuantity"></div></div>
+              </div>
+              <div>
+                <div class="yuan yuan02"></div>
+                <div>追溯档案数&nbsp;:&nbsp;<div class="traceArchivesQuantity"></div></div>
+              </div>
+              <div>
+                <div class="yuan yuan03"></div>
+                <div>防伪档案数&nbsp;:&nbsp;<div class="securityTraceArchivesQuantity"></div></div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- 表格 -->
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th class="text-center">档案编号</th>
+                <th class="text-center">档案名称</th>
+                <th class="text-center">产品类型</th>
+                <th class="text-center">生产地</th>
+                <th class="text-center">验证码使用数</th>
+                <th class="text-center">所属企业</th>
+                <th class="text-center">发布时间</th>
+                <th class="text-center">过审时间</th>
+                <th class="text-center">追溯二维码</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="text-center" v-for="data in tableData">
+                <td v-text="data.id"></td>
+                <td v-text="data.productionname"></td>
+                <td v-text="data.type"></td>
+                <td v-text="data.productionaddress"></td>
+                <td v-text="data.securitycodequantity"></td>
+                <td v-text="data.enterprisename"></td>
+                <td v-text="data.createdate"></td>
+                <td v-text="data.approveddateStr"></td>
+                <td>
+                  <img class="erweima" :src="data.twodimensioncodepath" @click="openImage(data.twodimensioncodepath)">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- 分页 -->
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="margin-bottom: 20px;">
+          <div class="zxf_pagediv"></div>
+        </div>
+      </div>
+
+      <!-- 图形报表 -->
+      <!--<div class="col-lg-10 col-lg-10 col-lg-12 col-lg-12 page-chart" style="padding:0;display:none;">
+        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <li>最近7天</li>
+          <li>最近30天</li>
+          <li>最近90天</li>
+          <li>最近半年</li>
+        </ul>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 cut-line" id="cut-line"><div></div></div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 chart-button">
+          <span>浏览量</span>
+          <span>企业入驻数</span>
+          <span>新增追溯档案数</span>
+          <span>新增验证档案数</span>
+        </div>
+        &lt;!&ndash; 报表 &ndash;&gt;
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 chart-image">
+          <div id="canvasDiv">
+
+          </div>
+        </div>
+      </div>-->
+    </div>
+  </div>
+
+
+
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../js/bootstrap-datetimepicker.min.js"></script>
+  <script src="../js/bootstrap-datetimepicker.zh-CN.js"></script>
+  <script src="../js/pagination/zxf_page.js"></script>
+  <script src="../vendor/vue/vue.js"></script>
+  <script src="../common/js/set_timeout.js"></script>
+  <script src="../common/js/commjs.js"></script>
+  <script src="../common/js/load_common_html.js"></script>
+  <script src="../js/government_home.js"></script>
+</body>
+
+</html>

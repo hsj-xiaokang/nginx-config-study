@@ -1,0 +1,88 @@
+.list-group-item:first-child{
+    background-image: url("../../img/common/zhuisu1.png");
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+.list-group-item:last-child{
+    background-image: url("../../img/common/bianji.png");
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+.list-group-item:last-child:hover{
+    background-image: url("../../img/common/bianji1.png");
+}
+.search-wrapper {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.now {
+    font-size: 24px;
+}
+.page-table{
+    padding:0;
+}
+.caption-wrapper>div{
+    margin-bottom: 20px;
+    padding-left: 0;
+    padding-right: 30px;
+}
+.caption-wrapper>div>div:first-child{
+    height: 54px;
+    line-height: 54px;
+    width: 100%;
+}
+.page-table01>div:first-child{
+    background-color: #337ab7;
+}
+.page-table02>div:first-child{
+    background-color: #5cb85c;
+}
+.page-table03>div:first-child{
+    background-color: #f0ad4e;
+}
+.page-table04>div:first-child{
+    background-color: #d9534f;
+}
+.caption-wrapper>div>div:last-child{
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+    background-color: #f5f5f5;
+    border: 1px solid #CCC;
+    cursor: pointer;
+}
+
+.now-wrapper{
+    float: left;
+    padding-left: 15px;
+    font-size: 20px;
+}
+.yesterday-wrapper{
+    float: right;
+    font-size: 16px;
+    padding-right: 15px;
+}
+.now,.yesterday{
+    padding-left: 5px;
+}
+.page-table-foot{
+    padding-left: 15px;
+    /*background-image: url("../../img/xiaoxi.png");*/
+    background-position: 95% center;
+    background-repeat: no-repeat;
+}
+#button-wrapper .search,#button-wrapper .clear-option,#button-wrapper .table-out {
+    background-color: #337ab7;
+    color: #FFF
+}
+
+#button-wrapper span:hover{
+    background-color: #286090;
+}
+
+.government-icon{
+    float: right;
+    padding-right: 15px;
+    padding-top: 12px;
+    color: #286090;
+}

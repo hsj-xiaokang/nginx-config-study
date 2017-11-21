@@ -1,0 +1,40 @@
+
+<!-- css -->
+<style>
+  .upload-image-submit{
+    background-color: #15b2ec;
+    cursor: pointer;
+  }
+</style>
+
+<!-- 模态框 - 上传视频 -->
+<div class="modal fade" id="myModal-upload" tabindex="-1">
+  <!-- 窗口声明 -->
+  <div class="modal-dialog modal-md" id="modal-dialog" style="margin-top: 150px;">
+    <!-- 内容声明 -->
+    <div class="modal-content">
+      <!-- 主体 -->
+      <div class="modal-body">
+        <form class="form-horizontal uploadForm" id="uploadForm" enctype="multipart/form-data">
+           <div class="form-group">
+            <label class="col-sm-2 control-label upload-file-caption">视频上传</label>
+            <div class="col-sm-10 uploadImage-body">
+              <div class="col-sm-12">
+                <span class="uploadImage-caption">新视频</span>
+              </div>
+              <div class="col-sm-12 uploadImage-main">
+                <input type="file" id="file" accept="image/png, image/jpeg"/>
+                <span class="uploadImage-point">文件大小在20M以内</span>
+                <span class="upload-error"></span>
+              </div>
+              <div class="uploadImage-foot" style="">
+                <span class="upload-image-submit">确定</span>
+                <span class="upload-image-cancel">取消</span>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,368 @@
+	<!-- 会员首页 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>农产品追溯平台</title>
+	<link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" href="../css/enterprise/common.css">
+	<link rel="stylesheet" href="../css/enterprise/memeber_home.css">
+	<link rel="stylesheet" href="../css/pagination/zxf_page.css">
+	<!--<link rel="stylesheet" href="../css/member_home.css">-->
+	<script src="../vendor/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="js/lib/raphael-min.js"></script>
+	<script type="text/javascript" src="js/res/chinaMapConfig.js"></script>
+	<script type="text/javascript" src="js/res/worldMapConfig.js"></script>
+	<script type="text/javascript" src="js/map.js"></script>
+	
+</head>
+<body>
+
+	<!-- banner -->
+	<div class="top"></div>
+
+	<div class="vue-container">
+		<!-- 企业头部 -->
+		<div class="page-top-wrapper"></div>
+
+		<!-- 面包屑 -->
+		<div class="container breadcrumb-wrapper" >
+			 <ol class="breadcrumb" id="breadcrumb">
+				 <li><a href="../index.html">首页</a></li>
+				 <li>用户中心</li>
+				 <li class="active" id="current-page">报表统计</li>
+			 </ol>
+		</div>
+		<!-- 网页主体区域 -->
+		<div class="container main-wrapper">
+			<!-- 左侧 -->
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 main-menu" id="main-menu">
+				<ul class="list-group" id="list-group">
+					<li class="list-group-item menu-back-files"><a href="member_home.html">追溯档案</a></li>
+					<li class="list-group-item menu-edit"><a>资料编辑</a></li>
+					<li class="list-group-item menu-basic-info"><a href="base_info.html">基本信息</a></li>
+					<li class="list-group-item menu-company-natural"><a href="enterprise_natural.html">企业资质</a></li>
+					<li class="list-group-item menu-account-safe"><a href="change_password.html">账号安全</a></li>
+					<li class="list-group-item menu-account-safe" style="background-color:#15b2ec;"><a href="total.html" style="color: white">报表统计</a></li>
+					<li class="list-group-item menu-message"><a href="message.html">消息<span class="noReadMessage"></span></a></li>
+				</ul>
+
+
+			</div>
+			<!-- 右侧 追溯档案-->
+			<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 main-body" id="main-body">
+				<div style="width: 100%;height: 40px;line-height: 40px;background-color: #f5f7fa;text-align: center;font-size: 14px">
+					<span style="float: left;width: 100px;display: block;" @click="toggleTabs(1)" :class="{active1:1==nowIndex}">概览</span>
+					<span style="float: left;width: 100px;display: block;" @click="toggleTabs(2)" :class="{active1:2==nowIndex}">扫描日志</span>
+				</div>
+				<div class="divTab" v-if="nowIndex===1">
+					<div style="padding: 40px 0 30px 0;font-size: 16px;">扫描整体情况</div>
+					<div>
+						<div class="row">
+							<div class="col-md-4">
+								<div class="panel1">
+									<img src="../img/enterprise/xx/1.png" />
+									<span>今日扫描</span>
+									<div style="font-size: 28px;">262</div>
+									<p class="zuisu">追溯码：145</p>
+									<p class="yanzheng">验证码：117</p>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="panel1">
+									<img src="../img/enterprise/xx/2.png" />
+									<span>昨日扫描</span>
+									<div style="font-size: 28px;">672</div>
+									<p class="zuisu">追溯码：325</p>
+									<p class="yanzheng">验证码：147</p>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="panel1">
+									<img src="../img/enterprise/xx/3.png" />
+									<span>总扫描次数</span>
+									<div style="font-size: 28px;">7425</div>
+									<p class="zuisu">追溯码：5873</p>
+									<p class="yanzheng">验证码：1552</p>
+								</div>
+							</div>
+						</div>
+						<div style="padding: 40px 0 30px 0;font-size: 16px;">扫描位置统计</div>
+						<iframe src="xx.html" style="width: 100%;height: 380px;border: none"></iframe>
+				    </div>
+			    </div>
+				<div class="divTab" v-else="nowIndex===2">
+					<div style="width: 100%;height: 40px;margin-top: 40px;margin-bottom: 20px;line-height:34px;">
+						<div style="float: left;border: 1px solid #0Eaae5;border-radius: 2px;width: 120px;height: 34px;color: #0eaae5">
+							<span @click="tab(1)" :class="{active2:1==nowIndex2}" style="float:left;display: block;width: 50%;height: 100%">追溯码</span>
+							<span @click="tab(2)" :class="{active2:2==nowIndex2}" style="float:left;display: block;width: 50%;height: 100%">验证码</span>
+						</div>
+						<div style="float: left;padding-left: 20px;">
+							<label style="display: inline-block">产品&nbsp;&nbsp;</label>
+							<select class="form-control" style="width:120px;display: inline-block">
+								<option>全部</option>
+								<option>A类</option>
+								<option>B类</option>
+								<option>C类</option>
+							</select>
+						</div>
+						<div style="float: left;padding-left: 20px;">
+							<label style="display: inline-block">时间&nbsp;&nbsp;</label>
+							 <input type="text" class="form-control" placeholder="起始时间" style="width:120px;display: inline-block" id="start" size="16"/>
+							-
+							<input type="text" class="form-control" placeholder="起始时间" style="width:120px;display: inline-block" id="start" size="16"/>
+						</div>
+						<div style="float: left;padding-left: 20px;">
+							<label style="display: inline-block">排序&nbsp;&nbsp;</label>
+							<select class="form-control" style="width:120px;display: inline-block">
+								<option>按时间</option>
+								<option>按扫描次数</option>
+								<option>按扫描人数</option>
+								<option>按扫描终端</option>
+							</select>
+						</div>
+					</div>
+					<div v-if="nowIndex2===1">
+						<p style="float: left;margin-top: 0px;margin-bottom: 20px;color: #999">共检索到<span style="color:#0eaae5">783</span>条数据</p>
+						<table class="table table-striped" style="border:1px solid #eee;border-radius: 2px;">
+							<thead style="background-color: #0eaae5;color: #ffffff;border:1px solid #0eaae5;height: 55px;">
+								<tr>
+									<th style="border-bottom-color: #0eaae5">序号</th>
+									<th style="border-bottom-color: #0eaae5">产品名称</th>
+									<th style="border-bottom-color: #0eaae5">扫描地区</th>
+									<th style="border-bottom-color: #0eaae5">扫描次数</th>
+									<th style="border-bottom-color: #0eaae5">扫描人数</th>
+									<th style="border-bottom-color: #0eaae5">终端个数</th>
+								</tr>
+							</thead>
+							<tbody style="font-size: 12px">
+							<tr v-for="i in list1" style="height: 30px;">
+								<td v-text="i.id" style="line-height: 25px;border-right: 1px solid #eee"></td>
+								<td  style="line-height: 25px;border-right: 1px solid #eee;"><a style="color:#0eaae5;cursor: pointer" @click="getParams(i)" v-text="i.name"></a></td>
+								<td v-text="i.region" style="line-height: 25px;border-right: 1px solid #eee"></td>
+								<td v-text="i.count" style="line-height: 25px;border-right: 1px solid #eee"></td>
+								<td v-text="i.pCount" style="line-height: 25px;border-right: 1px solid #eee"></td>
+								<td v-text="i.tCount" style="line-height: 25px"></td>
+							</tr>
+							
+						</table>
+					</div>
+					<div v-else>
+						<p style="float: left;margin-top: 0px;margin-bottom: 20px;color: #999">共检索到<span style="color:#0eaae5">10010</span>条数据</p>
+						<table class="table table-striped" style="border:1px solid #eee;border-radius: 2px;">
+							<thead style="background-color: #0eaae5;color: #ffffff;border:1px solid #0eaae5;height: 55px;">
+								<tr>
+									<th style="border-bottom-color: #0eaae5">序号</th>
+									<th style="border-bottom-color: #0eaae5">验证码</th>
+									<th style="border-bottom-color: #0eaae5">扫描地址</th>
+									<th style="border-bottom-color: #0eaae5">终端</th>
+									<th style="border-bottom-color: #0eaae5">扫描时间</th>
+									<th style="border-bottom-color: #0eaae5">风险程度</th>
+								</tr>
+							</thead>
+							<tbody style="font-size: 12px">
+							<tr v-for="i in list2" style="height: 30px;">
+								<td v-text="i.id" style="line-height: 25px;border-right: 1px solid #eee"></td>
+								<td style="line-height: 25px;border-right: 1px solid #eee"><a style="color:#0eaae5;cursor: pointer"  @click="getParams1(i)" v-text="i.code"></a></td>
+								<td v-text="i.address" style="line-height: 25px;border-right: 1px solid #eee"></td>
+								<td v-text="i.zCount" style="line-height: 25px;border-right: 1px solid #eee"></td>
+								<td v-text="i.time" style="line-height: 25px;border-right: 1px solid #eee"></td>
+								<td style="line-height: 25px">
+									<img :src="getImg(i.grade)"/>
+								</td>
+							</tr>
+							
+						</table>
+					</div>
+				</div>
+			</div>
+			<script src="../vendor/vue/vue.js"></script>
+			<script type="text/javascript">
+				new Vue({
+					el:'#main-body',
+					data(){
+						return{
+							nowIndex:1,
+							nowIndex2:1,
+							list1:[
+								{
+									id:1,
+									name:'明春他披梨',
+									region:'15个省、26个市区',
+									count:6214,
+									pCount:872,
+									tCount:45,
+									img:"http://139.198.13.100:7010/resource/M00/00/41/wKgAA1oC4taALU1AAABXbKAs5L0563.jpg",
+									detail:"明春他披梨",
+									code:"368376892396522"
+								},
+								{
+									id:2,
+									name:'晶弘小米辣',
+									region:'10个省、16个市区',
+									count:546,
+									pCount:221,
+									tCount:15,
+									img:"http://139.198.13.100:7010/resource/M00/00/40/wKgAA1oCy7CAOyX0AAGO58-VvBY994.jpg",
+									detail:"晶弘小米辣",
+									code:"228656796104538"
+								}
+							],
+							list2:[
+								{
+									id:1,
+									code:'368376892396522',
+									address:'111.15.21.92四川省乐山市',
+									zCount:"samsung  galaxy  7",
+									time:"2017-10-15 07:10:31",
+									name:'明春他披梨',
+									region:'15个省、26个市区',
+									count:6214,
+									pCount:872,
+									tCount:45,
+									img:"http://139.198.13.100:7010/resource/M00/00/41/wKgAA1oC4taALU1AAABXbKAs5L0563.jpg",
+									detail:"明春他披梨",
+									grade:1
+								},
+								{
+									id:2,
+									code:'228656796104538',
+									address:'114.55.25.88广西省南宁市',
+									zCount:"samsung  note  4",
+									time:"2017-10-25 09:25:11",
+									name:'晶弘小米辣',
+									region:'10个省、16个市区',
+									count:546,
+									pCount:221,
+									tCount:15,
+									img:"http://139.198.13.100:7010/resource/M00/00/40/wKgAA1oCy7CAOyX0AAGO58-VvBY994.jpg",
+									detail:"晶弘小米辣",
+									grade:2
+								}
+							]
+						}
+					},
+					methods:{
+						toggleTabs:function(index){
+							this.nowIndex=index;
+						},
+						tab:function(index){
+							this.nowIndex2=index;
+						},
+						getImg:function(i){
+							console.log(i);
+							switch(i){
+								case 1:
+									return '../img/enterprise/xx/di.png';
+									break;
+								case 2:
+									return '../img/enterprise/xx/gao.png';
+									break;
+								case 3:
+									return '../img/enterprise/xx/wu.png';
+									break;
+								case 4:
+									return '../img/enterprise/xx/zhong.png';
+									break;	
+								default:
+									break;
+							}
+						},
+						getParams: function(i){
+							localStorage.setItem("xx",JSON.stringify(i));
+							window.location.href="detail.html"
+						},
+						getParams1: function(i){
+							localStorage.setItem("yy",JSON.stringify(i));
+							window.location.href="detail1.html"
+						}
+					}
+				});
+			</script>
+			
+			<script type="text/javascript">
+				
+
+			</script>
+			<style>
+				.active1{
+					background: #0eaae5;
+					color:white;
+				}
+				.active2{
+					background: #0eaae5;
+					color:#FFFFFF;
+				}
+				.divTab{
+					text-align: center;
+				}
+				.panel1{
+					color: white;
+					height: auto;
+					background-size: 100%;
+					text-align: center;
+				}
+				.panel1 img{
+					z-index: 100;
+					width: 99%;
+					height: auto;
+				}
+				.panel1 span{
+					margin: auto;  
+					position: absolute;  
+					top: 0; left: 0; bottom: 0; right: 0;  
+					display: block;
+					top: 20px;
+					font-size: 16px;
+					border；1px solid red;
+					z-index: 101;
+				}
+				.panel1 div{
+					margin: auto;  
+					position: absolute;  
+					top: 0; left: 0; bottom: 0; right: 0;  
+					top: 56px;
+					z-index: 102;
+				}
+				.zuisu{
+					font-size: 12px;
+					position: absolute;
+					left:40px;
+					bottom: 20px;
+					color:#efefef;
+				}
+				.yanzheng{
+					font-size: 12px;
+					position: absolute;
+					left:40px;
+					bottom: 0px;
+					color:#efefef;
+				}
+				th,td{
+					text-align: center
+				}
+				th{
+					color: white
+					padding:10px;
+				}
+			</style>
+
+	<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../js/date/bootstrap-datetimepicker.min.js"></script>
+	<script src="../js/date/bootstrap-datetimepicker.zh-CN.js"></script>
+	<script src="../common/js/load_upload_html.js"></script>
+	<script src="../common/js/set_timeout.js"></script>
+	<script src="../js/jqPaginator.min.js"></script>
+
+	<script src="../common/js/commjs.js"></script>
+	<script src="../common/js/load_common_html.js"></script>
+	<script src="../js/pagination/zxf_page.js"></script>
+	<script src="../common/js/util.js"></script>
+</body>
+
+</html>

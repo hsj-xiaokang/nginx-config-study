@@ -1,0 +1,204 @@
+<!-- 会员首页 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>农产品追溯平台</title>
+  <script>
+      var _hmt = _hmt || [];
+      (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?1b06a7889f268c3641d916f8aa6584b2";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+      })();
+  </script>
+  <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/enterprise/common.css">
+  <link rel="stylesheet" href="../css/enterprise/base_info.css">
+  <link rel="stylesheet" href="../css/image_upload/image_upload.css">
+</head>
+
+<body>
+
+  <!-- banner -->
+  <div class="top"></div>
+  <!-- 企业头部 -->
+  <div class="page-top-wrapper"></div>
+  <!-- 面包屑 -->
+  <div class="container breadcrumb-wrapper">
+     <ol class="breadcrumb" id="breadcrumb">
+       <li><a href="../index.html">首页</a></li>
+       <li style="cursor:text;">资料编辑</li>
+       <li class="active" id="current-page">基本信息</li>
+     </ol>
+  </div>
+  <!-- 网页主体区域 -->
+  <div class="container main-wrapper">
+    <!-- 左侧 -->
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 main-menu" id="main-menu"></div>
+    <!-- 基本信息 -->
+    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12" id="basic-info-body">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 basic-info-body">
+        <form class="form-horizontal" style="padding-top: 40px;">
+          <div class="form-group" id="form-group-company">
+            <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12  control-label"><span class="xinghao">*&nbsp;</span>企业名称</label>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+              <input type="text" name="enterprisename" class="form-control" placeholder="请输入企业名称(40字以内)" maxlength="40">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12  control-label"><span class="xinghao">*&nbsp;</span>企业logo</label>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+              <div class="upload-wrapper logo" data-id="1" data-src="" id="logo"></div>
+            </div>
+          </div>
+          <!-- 生产地址 -->
+          <div class="form-group">
+            <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12  control-label"><span class="xinghao">*&nbsp;</span>生产地址</label>
+            <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6 address-list">
+              <select class="province-produce form-control"></select>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6 address-list">
+              <select class="city-produce form-control"></select>
+            </div>
+            <div class="col-lg-2 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-6 col-xs-offset-0 address-list address-list03" id="address-list03">
+              <select class="area-produce form-control"></select>
+            </div>
+            <div class="col-lg-2 col-lg-offset-0 col-md-3 col-md-offset-2 col-sm-5 col-sm-offset-0 col-xs-6 col-xs-offset-0 address-list address-list04" id="address-list04">
+              <select class="street-produce form-control"></select>
+            </div>
+          </div>
+          <!-- 补充的生产地址 -->
+          <div class="form-group">
+            <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12  control-label"></label>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+                <textarea class="form-control"
+                          rows="2"
+                          name="productionaddress"
+                          placeholder="请补充生产地址(20字以内)"
+                          maxlength="20"
+                ></textarea>
+            </div>
+          </div>
+          <!-- 法定地址 -->
+          <div class="form-group">
+            <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12  control-label"><span class="xinghao">*&nbsp;</span>法定地址</label>
+            <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6 address-list">
+              <select class="province-legal form-control"></select>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6 address-list">
+              <select class="city-legal form-control"></select>
+            </div>
+            <div class="col-lg-2 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-6 col-xs-offset-0 address-list address-list03" id="address-list03">
+              <select class="area-legal form-control"></select>
+            </div>
+            <div class="col-lg-2 col-lg-offset-0 col-md-3 col-md-offset-2 col-sm-5 col-sm-offset-0 col-xs-6 col-xs-offset-0 address-list address-list04" id="address-list04">
+              <select class="street-legal form-control"></select>
+            </div>
+          </div>
+          <!-- 补充的法定地址 -->
+          <div class="form-group">
+            <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12  control-label"></label>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+                <textarea class="form-control"
+                          rows="2"
+                          name="address"
+                          placeholder="请补充法定地址(20字以内)"
+                          maxlength="20"
+                ></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12  control-label">营业执照</label>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+              <div class="upload-wrapper businesslicense" id="businesslicense" data-id="2" data-src=""></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12  control-label">联系方式</label>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+              <input type="text"
+                     name="enterprisephone"
+                     class="form-control"
+                     placeholder="请填写联系方式(20字以内)"
+                     maxlength="20"
+              />
+            </div></div>
+          <div class="form-group">
+            <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12  control-label">企业负责人</label>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+              <input type="text"
+                     name="owner"
+                     class="form-control"
+                     placeholder="请填写企业负责人(10字以内)"
+                     maxlength="10"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12  control-label">企业简介</label>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+              <textarea class="form-control"
+                        rows="4"
+                        name="enterpriseprofile"
+                        placeholder="请填写企业简介(200字以内)"
+                        maxlength="200"
+              ></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12  control-label">业务范围</label>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+              <textarea class="form-control"
+                        rows="4"
+                        name="scope"
+                        placeholder="请填写业务范围(200字以内)"
+                        maxlength="200"
+              ></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12  control-label">服务信息</label>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+             <textarea class="form-control"
+                       rows="4"
+                       name="serviceinformation"
+                       placeholder="请填写服务信息(200字以内)"
+                       maxlength="200"
+             ></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12  control-label">企业视频</label>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+              <div class="upload-movie-wrapper" id="upload-movie-wrapper" data-id="3">
+                <video controls src=""></video>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="form-save">
+          <div class="">保存</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../common/js/set_timeout.js"></script>
+  <script src="../vendor/vue/vue.js"></script>
+  <script src="../common/js/commjs.js"></script>
+  <script src="../common/js/load_common_html.js"></script>
+  <script src="../common/js/util.js"></script>
+  <script src="../common/js/load_upload_html.js"></script>
+  <script src="../js/base_info.js"></script>
+
+</body>
+
+</html>

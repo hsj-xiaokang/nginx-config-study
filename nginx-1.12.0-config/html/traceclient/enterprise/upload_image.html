@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>农产品追溯平台</title>
+  <script>
+      var _hmt = _hmt || [];
+      (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?1b06a7889f268c3641d916f8aa6584b2";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+      })();
+  </script>
+  <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="cropper/dist/cropper.min.css">
+  <link rel="stylesheet" href="../css/image_upload/image_upload.css">
+
+</head>
+
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <form class="form-horizontal uploadForm" id="uploadForm" enctype="multipart/form-data">
+        <!--<div class="form-group">
+          <label class="col-sm-2 control-label upload-file-name"><span>*</span>&nbsp;图片名称</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control upload-file-input" placeholder="请输入图片名称" maxlength='5'>
+          </div>
+          <div class="col-sm-10 col-sm-offset-2 upload-file-name-error" ></div>
+        </div>-->
+        <div class="form-group">
+          <label class="col-sm-2 control-label upload-file-caption"><span>*</span>&nbsp;图片上传</label>
+          <div class="col-sm-10 uploadImage-body">
+            <div class="col-sm-12">
+              <span class="uploadImage-caption">新图片</span>
+            </div>
+            <div class="col-sm-12 uploadImage-main">
+              <input type="file" id="file"/>
+              <span class="uploadImage-point">文件大小在2M以内，仅支持JPG、BMP、PNG格式</span>
+              <span class="upload-error"></span>
+              <div class="imageBox">
+                <img class="show-image" src="" >
+              </div>
+              <div class="cropped"></div>
+            </div>
+            <div class="uploadImage-foot" style="">
+              <span class="btnCrop" id="btnCrop">裁剪</span>
+              <span class="upload-image-submit">确定</span>
+              <span class="upload-image-cancel">取消</span>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="cropper/dist/cropper.min.js"></script>
+  <script src="../common/js/commjs.js"></script>
+  <script src="../js/img-cut/image_cropper.js"></script>
+</body>
+
+</html>

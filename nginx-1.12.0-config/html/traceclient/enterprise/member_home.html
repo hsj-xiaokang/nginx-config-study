@@ -1,0 +1,159 @@
+  <!-- 会员首页 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>农产品追溯平台</title>
+  <script>
+      var _hmt = _hmt || [];
+      (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?1b06a7889f268c3641d916f8aa6584b2";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+      })();
+  </script>
+  <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css">
+  <link rel="stylesheet" href="../css/enterprise/common.css">
+  <link rel="stylesheet" href="../css/enterprise/memeber_home.css">
+  <link rel="stylesheet" href="../css/pagination/zxf_page.css">
+</head>
+<body>
+
+  <!-- banner -->
+  <div class="top"></div>
+
+  <!-- 企业头部 -->
+  <div class="page-top-wrapper"></div>
+
+  <!-- 面包屑 -->
+  <div class="container breadcrumb-wrapper" >
+     <ol class="breadcrumb" id="breadcrumb">
+       <li><a href="../index.html">首页</a></li>
+       <li class="active" id="current-page">用户中心</li>
+     </ol>
+  </div>
+
+  <!-- 网页主体区域 -->
+  <div class="container main-wrapper">
+      <!-- 左侧 -->
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 main-menu" id="main-menu"></div>
+      <!-- 右侧 追溯档案-->
+      <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 main-body" id="main-body">
+        <!-- 新建追溯档案 -->
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " id="back-text">
+          <i class="glyphicon glyphicon-plus"></i>
+          <span>&nbsp;&nbsp;&nbsp;新建追溯档案</span>
+        </div>
+        <!-- 追溯档案展开部分 -->
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " id="back-text-out" style="display: none;">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <ul class="nav nav-tabs" id="nav-tabs"></ul>
+          </div>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 about-product">
+          </div>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center last-submit-button">
+            <button onclick="newProduct()" value="2" class="btn">&nbsp;&nbsp;&nbsp;新建&nbsp;&nbsp;&nbsp;</button>
+            <button class="btn">&nbsp;&nbsp;&nbsp;取消&nbsp;&nbsp;&nbsp;</button>
+          </div>
+        </div>
+        <!-- 表单 -->
+        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 back-select1" id="back-select1">
+          <div class="input-group">
+            <div class="input-group-addon">产品类型</div>
+            <select class="form-control select-type"></select>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 back-select2" id="back-select2">
+          <div class="input-group">
+            <div class="input-group-addon">审核状态</div>
+            <select class="form-control select-status"></select>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 back-time" id="back-time">
+          <div class="input-group">
+            <div class="input-group-addon">起始时间</div>
+            <input type="text" class="form-control" placeholder="起始时间" id="start" size="16"/>
+            <div class="input-group-addon glyphicon glyphicon-minus" id="time-fengge"></div>
+            <input type="text" class="form-control" placeholder="结束时间" id="end" size="16"/>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 back-input" id="back-input">
+          <div class="input-group">
+            <div class="input-group-addon">产品名称</div>
+            <input type="text" class="form-control"
+                   placeholder="请输入您的产品名称"
+            />
+            <div class="input-group-addon search-product" style="cursor: pointer;">搜索</div>
+          </div>
+        </div>
+
+
+
+
+        <!-- 列表 -->
+        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="back-list-wrapper">
+
+            <div v-for="product in productList">
+              <!-- 日期 -->
+              <div v-show="product.captionTime.isShow" v-text="product.captionTime.time" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 back-list-date"></div>
+              <!-- 列表 -->
+              <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product" style="padding-top:15px;padding-bottom:15px;">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" id="back-list-img">
+                  <img @click="clickProduct(product.id)" :src="product.picture">
+                </div>
+                <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 back-list-text" id="back-list-text">
+
+                  <p @click="clickProduct(product.id)" v-text="product.productionname"></p>
+                  <p class="back-list-text-time">发布时间&nbsp;&nbsp;:&nbsp;&nbsp;<span v-text="product.createdate"></span></p>
+                  <div v-if="product.status == 2">
+                    <p class="back-list-text-code">
+                      <span>追溯码&nbsp;&nbsp;:&nbsp;&nbsp;<span v-text="product.traceno"></span></span>
+                    </p>
+                    <p>
+                      <span class="scan-wrapper">已被扫描&nbsp;&nbsp;:&nbsp;&nbsp;<span v-text="product.scanstime"></span>&nbsp;次</span>
+                    </p>
+                    <p class="back-list-text-button">
+                      <span @click="putFackCode(product.id)"><i class="glyphicon glyphicon-print"></i>&nbsp;打印追溯码</span>
+                      <span @click="addFackCode(product)" class=""><i class="glyphicon glyphicon-plus"></i>&nbsp;添加验证码</span>
+                    </p>
+                  </div>
+                  <div v-else>
+                    <span class="status-wrapper" v-text="product.statusname"></span>
+                  </div>
+                </div>
+              </li>
+
+            </div>
+        </ul>
+
+        <!-- 分页 -->
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 50px;">
+         <div class="zxf_pagediv"></div>
+        </div>
+      </div>
+
+    </div>
+
+
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../js/date/bootstrap-datetimepicker.min.js"></script>
+  <script src="../js/date/bootstrap-datetimepicker.zh-CN.js"></script>
+  <script src="../common/js/load_upload_html.js"></script>
+  <script src="../common/js/set_timeout.js"></script>
+  <script src="../js/jqPaginator.min.js"></script>
+  <script src="../vendor/vue/vue.js"></script>
+  <script src="../common/js/commjs.js"></script>
+  <script src="../common/js/load_common_html.js"></script>
+  <script src="../js/pagination/zxf_page.js"></script>
+  <script src="../common/js/util.js"></script>
+  <script src="../js/member_home.js"></script>
+</body>
+
+</html>

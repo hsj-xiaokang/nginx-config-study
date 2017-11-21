@@ -1,0 +1,681 @@
+/* trace_archive */
+/* 5等分 */
+.col-xs-1-5,
+.col-sm-1-5,
+.col-md-1-5,
+.col-lg-1-5 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 30px;
+    padding-left: 0px;
+}
+
+.col-xs-1-5 {
+    width: 33.33%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .col-sm-1-5 {
+        width: 33.33%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-1-5 {
+        width: 25%;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-1-5 {
+        width: 20%;
+        float: left;
+    }
+}
+@media screen and (max-width: 1200px){
+
+
+}
+@media screen and (max-width: 992px){
+
+}
+@media screen and (max-width: 768px) {
+    #products-controller-img{
+        padding-right: 0;
+    }
+    #products-info-text-wrapper{
+        margin-top: 20px;
+    }
+    /* 产销过程 */
+    #products-controller-step{
+        margin-top: 20px;
+        padding-left: 0;
+        font-size: 8px;
+    }
+    #products-controller-img>img{
+        width: 250px;
+        height: 160px;
+    }
+    .products-attestation-bigImage,.products-natural-bigImage{
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width: 414px) {
+    #step-top li,#step-bottom li{
+        line-height: 14px;
+        padding-top: 15px;
+    }
+    #products-controller-step{
+        font-size: 8px;
+    }
+    #footer p {
+        padding-top: 10px;
+    }
+    #products-attestation-smallImage img{
+        width: 50px;
+        height: 40px;
+    }
+    #products-natural-smallImage img{
+        width: 50px;
+        height: 40px;
+    }
+}
+/* top */
+.top {
+    top: 0px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: 1030;
+    background-color: #2b2d2b;
+    font-size: 12px;
+    height: 32px;
+    line-height: 32px;
+    text-align: right;
+}
+.top a:first-child {
+    color: #ccc;
+}
+.top a {
+    color: #ccc;
+    margin-right: 20px;
+    text-decoration: none;
+}
+.top a:hover{
+    text-decoration: none;
+    color: #0daae4
+}
+.pull-left {
+    float: left;
+}
+.pull-left {
+    float: left !important;
+}
+.top img {
+    margin-right: 8px;
+    margin-top: -4px;
+    vertical-align: middle;
+
+}
+
+a:hover{
+    text-decoration: none;
+}
+.login-out{
+    cursor: pointer;
+}
+#breadcrumb-wrapper a{
+    text-decoration: none;
+}
+.container-wrapper{
+    background-color: #f8f9fb;
+}
+#company-name-wrapper{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #f8f9fb;
+    margin-top: 32px;
+}
+#company-name-wrapper img{
+    border-radius: 50%;
+    overflow: hidden;
+}
+#company-name-wrapper span{
+    margin-left:10px;
+    color: black;
+    font-size: 20px;
+}
+#breadcrumb-wrapper{
+    margin-top:20px;
+}
+#breadcrumb{
+    background-color: #FFF;
+}
+#breadcrumb-wrapper>ol>li:last-child>a{
+    color: #000;
+    cursor: default;
+}
+#products-info-img-wrapper>div{
+   /* border: 1px solid #f5f5f5;
+    background-color: #fafafa; ;*/
+}
+#products-info-img-wrapper img{
+    /*padding: 20% 20%;*/  /* 上下  左右 */
+    width:100%;
+    height:auto;
+}
+#products-info-text-wrapper{
+
+}
+.productInfoName{
+    display: inline-block;
+    font-size: 20px;
+    padding-bottom: 8px;
+}
+
+#table-productInfo td{
+    padding-left: 0;
+    padding-right: 0;
+    border-width: 0;
+}
+#table-productInfo td:first-child{
+    width: 120px;
+    color:#808080;
+}
+
+.products-background-wrapper{
+    /*background: #464646;
+    background-image: url("../img/trace_archive/product_bk.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;*/
+  /*  min-height:510px;*/
+    height: auto;
+}
+.products-controller-wrapper,products-attestation-wrapper,.enterprise-info-container,.products-natural-wrapper,.enterprise-movie-wrapper{
+    margin-top:20px;
+}
+.enterprise-movie-wrapper{
+    display: none;
+}
+/* 产销过程 */
+#products-controller-caption{
+    color: #333333;
+    padding-left: 49px;
+    padding-right: 0;
+    font-size: 24px;
+    background-image: url("../img/trace_archive/chanxiaoguoocheng.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    line-height: 55px;
+}
+.reality{
+    position: absolute;
+    right: 15px;
+    top: -2px;
+    cursor: pointer;
+    display: none;
+}
+#products-attestation-caption,#products-natural-caption,#enterprise-movie-caption{
+    color: #000;
+    padding-left: 40px;
+    paddinig-right: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 20px;
+    background-image: url("../img/trace_archive/renzheng.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+.enterprise-movie{
+    height: 300px;
+}
+.enterprise-movie video{
+    object-fit:fill;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+#enterprise-info-caption{
+    color: #FFFFFF;
+    padding-left: 40px;
+    paddinig-right: 0;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    background-image: url("../img/trace_archive/qiye.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.products-real-status-wrapper{
+    height: 41px;
+    text-align: right;
+    padding-right: 0;
+    margin-bottom: 20px;
+    display: none;
+}
+.products-real-status-wrapper>img{
+    cursor: pointer;
+}
+.products-controller-img{
+    padding-left: 0;
+    padding-right: 15px;
+    padding-bottom: 30px;
+}
+#products-controller-img img{
+    width: 100%;
+    height: 300px;
+}
+.products-controller-step{
+    padding-right: 0;
+  /*  padding-left: 50px;*/
+}
+.products-controller-step{
+    text-align: center;
+    line-height: 45px;
+    color: #FFF;
+    padding-bottom: 30px;
+}
+#products-controller-step>.step-top li{
+    height: 45px;
+    list-style: none;
+    float: left;
+
+}
+/* top */
+#products-controller-step>.step-top li:nth-child(odd){
+    width: 13.2%;
+    background-image: url("../img/trace_archive/s1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 45px;
+    cursor: pointer;
+
+}
+/*#products-controller-step>.step-top li:nth-child(odd):hover{
+    background-image: url("../img/product/s2_a.png");
+}*/
+#products-controller-step>.step-top li:nth-child(even){
+    width: 8.5%;
+    background-image: url("../img/trace_archive/jiantou.png");
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+/* bottom */
+#products-controller-step>.step-bottom li{
+    height: 45px;
+    list-style: none;
+    float: right;
+    cursor: pointer;
+
+}
+#products-controller-step>.step-bottom li:nth-child(odd){
+    width: 13.2%;
+    background-image: url("../img/trace_archive/s1.png");
+    background-repeat: no-repeat;
+    background-size: 100% 45px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-position: center;
+}
+
+#products-controller-step>.step-bottom li:nth-child(even){
+    width: 8.5%;
+    background-image: url("../img/trace_archive/jiantou-left.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#fengexian{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-image: url("../img/trace_archive/jiantou-down.png");
+    background-repeat: no-repeat;
+    background-position: 94% 83%;
+}
+
+/* 产品认证 */
+.products-attestation-bigImage{
+
+}
+.products-attestation-bigImage img,.products-natural-bigImage img{
+    width: 100%;
+    height: auto;
+}
+.smallImage-wrapper,.smallImage-wrapper-natural{
+    height: 100%;
+    padding: 15px;
+    border: 1px solid #FFF;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+/* 图片部分 */
+.smallImage-wrapper div,.smallImage-wrapper-natural div{
+    height: 100%;
+    width: auto;
+    text-align: center;
+}
+.smallImage-wrapper img,.smallImage-wrapper-natural img{
+    width: 100%;
+    height: 80px;
+    text-align: center;
+}
+.smallImage-wrapper div:last-child,.smallImage-wrapper-natural div:last-child{
+    margin-top: 5px;
+    height: 25px;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.active-smallImage{
+    border-color: #15b2ec;
+}
+
+/* 企业信息 */
+.enterprise-info-container{
+    background-color: #4a9a48;
+}
+.enterprise-info-body{
+    color: #FFF;
+    padding-left: 0;
+    font-size: 14px;
+}
+#table-enterpriseInfo td{
+    border-width: 0;
+    padding-left: 0;
+    color: #FFF;
+}
+#table-enterpriseInfo td:first-child{
+    width: 135px;
+}
+
+/* 企业描述部分 */
+.description-wrapper{
+    margin-top: 20px;
+}
+.description-wrapper img{
+    width: 100%;
+    height:auto;
+}
+
+/* footer */
+.footer{
+    background-color: #4c4c4c;
+    margin-top: 20px;
+    position: absolute;
+    width: 100%;
+
+}
+.footer p{
+    color: #FFFFFF;
+    font-size: 1.0em;
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+#breadcrumb-wrapper a{
+    color: #000;
+}
+#breadcrumb-wrapper a:hover{
+    color: #15b2ec;
+    text-decoration: none;
+}
+#current-page{
+    color: #15b2ec;
+}
+.smallImage-wrapper:hover,.smallImage-wrapper-natural:hover{
+    border-color: #15b2ec;
+}
+.smallImage-active {
+    border-color: #15b2ec;
+}
+
+/* GIS */
+.gis-wrapper{
+
+    margin-top: 30px;
+}
+.gis-caption{
+    margin-top:0;
+    margin-bottom: 20px;
+    padding:0;
+}
+
+/* 扫描次数 */
+.scan-number {
+    background-color: #f5f7fa;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 20px;
+    color: black;
+    margin-bottom: 5px;
+    display: none;
+}
+.scan-number span{
+    color: #00a2ae;
+    font-size: 16px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* 店铺 */
+.archiveLink-wrapper{
+   /* display: none;*/
+}
+.archiveLink-wrapper>div{
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    text-align: right;
+    line-height: 32px;
+    width: 100px;
+    height: 32px;
+}
+.archiveLink-wrapper>div>div{
+    float: left;
+}
+
+.archiveLink-wrapper>div>div:first-child{
+    background-image: url("../img/enterprise/new_product/tianmao.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 32px 32px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+.archiveLink-wrapper>div>div:last-child{
+    margin-left: 10px;
+
+}
+.archiveLink-wrapper>div a{
+    color: #333;
+}
+.archiveLink-wrapper>div a:hover{
+    color: #15b2ec;
+    text-decoration: underline;
+}
+
+/* 产销过程重构 */
+.process-image-wrapper{
+    padding: 0;
+}
+.process-image-step{
+    padding: 0;
+    position: relative;
+    /*padding-left: 25px;
+    padding-right: 25px;*/
+}
+
+/* 滚动条两端按钮 */
+.step-leftIcon,.step-rightIcon{
+    position: absolute;
+    top: 39%;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 20px;
+    color: #999;
+    cursor: pointer;
+    display: none;
+}
+.step-leftIcon{
+    left: 0;
+}
+.step-rightIcon{
+    right: 0;
+}
+.process-image-big{
+    height:100%;
+    padding: 0;
+}
+.process-image-big img{
+    width: 100%;
+    height: 350px;
+    cursor: pointer;
+}
+.process-image-small img{
+    width: 100%;
+    height: 175px;
+    cursor: pointer;
+}
+.process-image-small{
+    height:50%;
+    padding:0;
+}
+.process-image-small-1 img,.process-image-small-2 img{
+    padding-bottom: 1px;
+}
+.process-image-small-1 img{
+    padding-right: 1px;
+}
+.process-image-small-2 img{
+    padding-left: 1px;
+}
+.process-image-small-3 img,.process-image-small-4 img{
+    padding-top: 1px;
+}
+.process-image-small-3 img{
+    padding-right: 1px;
+}
+.process-image-small-4 img{
+    padding-left: 1px;
+}
+.process-image-text{
+    min-height: 136px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    background-color: #fafafa;
+    color: #333;
+    font-size: 20px;
+    line-height: 32px;
+    box-shadow: 2px 2px 2px #CCC;
+    /*
+        2px :  表示水平阴影的位置
+        4px : 表示垂直阴影的位置
+        5px : 表示模糊距离
+        #000 ： 表示阴影的颜色（#000  黑色）
+    */
+}
+
+/* 张数 */
+.process-image-number{
+    position: absolute;
+    z-index: 1;
+    right: 15px;
+    top: 10px;
+    height: 33px;
+    width: 64px;
+    text-align: center;
+    line-height: 34px;
+    background-color: rgba(0,0,0,0.5);/* IE9、标准浏览器、IE6和部分IE7内核的浏览器(如QQ浏览器)会读懂 */
+    border-radius: 34px;
+
+}
+.process-image-number span{
+    color: #FFFFFF;
+}
+
+/* 只支持IE6、7、8 */
+@media \0screen\,screen\9 {
+    .process-image-number{
+        background-color:#000000;
+        filter:Alpha(opacity=50);
+        position:static; /* IE6、7、8只能设置position:static(默认属性) ，否则会导致子元素继承Alpha值 */
+        *zoom:1; /* 激活IE6、7的haslayout属性，让它读懂Alpha */
+    }
+    .process-image-number span{
+        position: relative;/* 设置子元素为相对定位，可让子元素不继承Alpha值 */
+    }
+}
+/* step */
+.step-list-wrapper{
+    margin-top: 22px;
+    width: 100%;
+}
+.step-list{
+    width: 126.5px;
+    float: left;
+}
+.step-list>div{
+    width: 100%;
+    text-align: center;
+    color: #666666;
+}
+.up-text{
+    margin-bottom: 15px;
+    height:34px;
+    line-height: 34px;
+}
+.down-text{
+    margin-top: 15px;
+    height:34px;
+    line-height: 34px;
+}
+.yuan{
+    height: 2px;
+    background: #bfbfbf;
+    position: relative;
+}
+.yuan>div{
+    position: absolute;
+    text-align: center;
+    width: 16px;
+    height: 16px;
+    border: 8px solid #bfbfbf;
+    border-radius: 50%;
+    top: -6px;
+    left: 45%;
+    cursor: pointer;
+}
+
+/* 左右箭头 */
+.arrow-left,.arrow-right{
+    display: none;
+    width: 33px;
+    height: 64px;
+    position: absolute;
+    z-index: 1;
+    top: 29%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.arrow-left{
+    /* background-image: url("../img/trace_archive/left2.png"); */
+}
+.arrow-right{
+    right: 0;
+    /* background-image: url("../img/trace_archive/right2.png"); */
+}
+
+
+/* 重构 */
+/*.yuan-wrapper{
+    border: 1px solid red;
+}*/
+
+
+

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <script>
+      var _hmt = _hmt || [];
+      (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?1b06a7889f268c3641d916f8aa6584b2";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+      })();
+  </script>
+  <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/government/table_count.css">
+  <link rel="stylesheet" href="../css/government/change_password.css">
+  <script src="../js/include.js"></script>
+  <title>农产品追溯平台</title>
+</head>
+
+<body id="page-top" class="index">
+  <!--banner-->
+  <div class="top"></div>
+  <!-- 面包屑 -->
+  <div class="container breadcrumb-wrapper" id="breadcrumb-wrapper">
+    <ol class="breadcrumb" id="breadcrumb">
+      <li><a href="../index.html" style="color: #333;">首页</a></li>
+      <li class="active" id="current-page">账号安全</li>
+    </ol>
+  </div>
+  <!-- 网页主体 -->
+  <div class="container-fluid page-main">
+    <div class="row">
+      <!-- 左侧菜单 -->
+      <div class="col-lg-2 col-lg-2 col-lg-12 col-lg-12 text-center page-menu">
+        <ul class="list-group" id="list-group">
+          <a class="list-group-item table-count" href="government_home.html">报表统计</a>
+          <a class="list-group-item account-safe" id="actived" href="account_safe.html">账号安全</a>
+        </ul>
+      </div>
+      <!-- 右侧 -->
+      <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 page-table">
+
+        <div style="padding:0;" class="col-lg-7 col-lg-offset-2 col-md-7 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 form-wrapper" id="form-wrapper" >
+          <form class="form-horizontal" id="form-main">
+            <div class="form-group">
+              <label class="col-sm-3 <!--col-sm-3 col-sm-3 col-sm-3--> control-label">我的旧密码</label>
+              <div class="col-sm-5">
+                <input type="password" class="form-control" placeholder="请输入旧密码" maxlength="12" />
+              </div>
+              <div class="col-sm-3 form-error" style="line-height:34px;padding-right:0;">旧密码错误</div>
+            </div>
+
+
+            <div class="form-group">
+              <label class="col-sm-3 control-label">输入新密码</label>
+              <div class="col-sm-5">
+                <input type="password" class="form-control" placeholder="请输入8-12位英文字符数字组合" maxlength="12" />
+              </div>
+              <div class="col-sm-3 form-error" style="line-height:34px;padding-right:0;">两次密码不一致</div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3 control-label">确认新密码</label>
+              <div class="col-sm-5">
+                <input type="password" class="form-control" placeholder="请再次输入新密码" maxlength="12" />
+              </div>
+              <div class="col-sm-3 form-error" style="line-height:34px;padding-right:0;">两次密码不一致</div>
+            </div>
+            <div class="form-group">
+              <label class="col-lg-3 col-md-3 col-sm-3 col-xs-0 control-label" id="form-submit-left"></label>
+              <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 form-submit">
+                <div>
+                  完成
+                </div>
+              </div>
+              <div class="col-sm-3" style="line-height:34px;padding-right:0;"></div>
+            </div>
+          </form>
+        </div>
+
+
+
+
+
+
+        <!-- 密码修改成功显示界面 -->
+        <div style="display:none;" class="col-lg-10 col-md-10 col-sm-10 col-xs-12 text-center login-success-wrapper" id="login-success-wrapper">
+          <img src="../img/common/zhengque.png" />
+          <div>你的密码已经修改成功!</div>
+          <div><span class="login-success-number">5</span>s后自动跳转到登录页</div>
+          <div class="col-lg-2 col-lg-offset-5 col-md-2 col-md-offset-5 col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3 quick-login">立刻登录</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../common/js/commjs.js"></script>
+  <script src="../common/js/set_timeout.js"></script>
+  <script src="../vendor/vue/vue.js"></script>
+  <script src="../common/js/load_common_html.js"></script>
+  <script src="../js/account_safe.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,252 @@
+/* company_info */
+a:hover{
+    text-decoration: none;
+    color: inherit;
+}
+a{
+    color: inherit;
+}
+
+@media screen and (max-width: 992px) {
+    #products-name-label{
+        margin-left:0;
+        padding-left: 0;
+    }
+    #products-name-div{
+        margin-left:0;
+    }
+    #products-type-div{
+        margin-left:0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #dl-horizontal dd{
+        margin-left: 0;
+    }
+
+}
+
+
+/*小于400px时顶部排版改变*/
+@media screen and (max-width: 410px) {
+
+}
+.page-top-wrapper{
+    background-color: #f8f9fb;
+    margin-top: 32px;
+}
+.enterprise-name-wrapper{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.logo-name{
+}
+.logo-name img{
+    width: 50px;
+    height:50px;
+    border-radius: 50%;
+}
+.logo-name span{
+    display: inline-block;
+    padding-left: 15px;
+    font-size: 24px;
+}
+.enterprise-num{
+    margin-top: -5px;
+    padding-left: 70px;
+    color: #808080;
+}
+.enterprise-num>span{
+    display: inline-block;
+    margin-right: 15px;
+}
+.enterprise-num>span>span{
+    font-size: 20px;
+    color: #15b2ec;
+}
+
+#breadcrumb{
+    padding-left:0;
+    margin-top: 20px;
+    background-color: #FFF;
+}
+#breadcrumb a{
+    color: #000;
+}
+#breadcrumb a:hover{
+    color: #15b2ec;
+}
+#current-page{
+    color: #15b2ec;
+}
+#company-menu>div{
+    height:50px;
+    width: 100%;
+    background-color: #f8f9fb;
+}
+
+#company-menu span{
+    display: block;
+    float: left;
+    line-height:50px;
+    text-align:center;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+}
+
+#company-menu span:last-child{
+    margin-left:2px;
+}
+.company-name-main img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+/* 企业信息 */
+#company-info-wrapper,#company-all-products{
+    margin-top: 20px;
+}
+.company-info-caption{
+    color: #15b2ec;
+    background-image: url("../img/trace_archive/qiye_blue.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    height: 30px;
+    line-height: 30px;
+    font-size: 24px;
+    padding: 0 0 0 40px;
+    margin: 20px 0 10px 0;
+}
+.company-info-content{
+    margin-top: 10px;
+    padding:0;
+}
+.company-info-content span{
+    display: block;
+    padding: 0;
+}
+.products-type-label{
+    float:left;height:35px;
+    line-height:35px;
+    /* padding-left:15px;*/
+}
+#products-search-select{
+    width:100%;
+    height:35px;
+}
+.products-name-label{
+    float:left;height:35px;
+    line-height:35px;
+    padding-left:15px;
+    margin-left:30px;
+}
+.products-name-div{
+    height:35px;
+    margin-left:15px;
+}
+#products-name-div input{
+    width:100%;
+    height:100%;
+}
+#products-name-div{
+    padding-right:0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.products-type-div{
+    margin-left:15px;
+}
+/* 产品列表 */
+#search-button{
+    background-color: #15b2ec;
+    color: #FFF;
+    border-width: 0;
+}
+#search-button span:first-child{
+    background-image: url("../img/product/sousuo.png");
+    background-repeat: no-repeat;
+    background-position:center;
+}
+#products-list-wrapper{
+}
+#products-list-wrapper>.row>div{
+    margin-top: 30px;
+}
+.product-border{
+    border: 2px solid #FFF;
+    cursor: pointer;
+}
+.product-border span{
+    padding-top: 8px;
+    display: block;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.product-border span:first-child{
+   color: #333;
+}
+.product-border span:last-child{
+    color: #999;
+}
+#products-list-wrapper img{
+    width:100%;
+    height: 262.5px;
+}
+.product-border span:last-child{
+    padding-bottom:10px;
+}
+.list-text-wrapper{
+    background-color: #eee;
+}
+.input-group-addon{
+    cursor: pointer;
+}
+
+/* 企业信息body */
+.enterpriseInfo-body{
+}
+#table-enterpriseInfo td{
+    border-width: 0;
+    padding-left: 0;
+}
+#table-enterpriseInfo td:first-child{
+    width: 135px;
+}
+
+
+/* top */
+.top {
+    top: 0px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: 1030;
+    background-color: #2b2d2b;
+    font-size: 12px;
+    height: 32px;
+    line-height: 32px;
+    text-align: right;
+}
+.top a:first-child {
+    color: #ccc;
+}
+.top a {
+    color: #ccc;
+    margin-right: 20px;
+    text-decoration: none;
+}
+.pull-left {
+    float: left;
+}
+.pull-left {
+    float: left !important;
+}
+.top img {
+    margin-right: 8px;
+    margin-top: -4px;
+    vertical-align: middle;
+
+}

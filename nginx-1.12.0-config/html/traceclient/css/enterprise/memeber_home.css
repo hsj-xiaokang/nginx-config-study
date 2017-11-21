@@ -1,0 +1,205 @@
+#back-list-wrapper{
+    padding:0;
+    display: none;
+}
+#back-list-wrapper li{
+    background-color: #f5f7fa;
+    margin-bottom: 20px;
+}
+#back-list-wrapper li:hover{
+    background-color: #ebeef3;
+}
+.back-list-date{
+    height: 26px;
+    line-height: 28px;
+    margin-bottom: 15px;
+    padding-left: 40px;
+    font-size: 24px;
+    color: #15b2ec;
+    background-image: url("../../img/enterprise/home/time.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+.back-list-date:first-child{
+    /*margin-top: 20px;*/
+}
+#back-text{
+    padding:0;
+    height:50px;
+    background: #FFF;
+    border: 1px #ccc dashed;
+    line-height:50px;
+    text-align:center;
+    font-size:16px;
+    margin-bottom:20px;
+    cursor: pointer;
+}
+#main-body{
+    /* padding-left: 30px;*/
+    padding-right:0px;
+}
+#back-text-out{
+    border: 1px solid #666;
+    margin-bottom:20px;
+    padding:0;
+    border: 1px solid #CCC;
+}
+#back-text-out>div:first-child{
+    margin-top:20px;
+}
+.about-product{
+    margin-top:20px;
+}
+.about-product span{
+    display: inline-block;
+    width: 70px;
+    height: 32px;
+    font-size: 14px;
+    color: #333333;
+    line-height: 32px;
+    text-align: center;
+    margin-right: 20px;
+    border: 1px solid #cacbd0;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.last-submit-button{
+    margin-top:30px;
+    margin-bottom: 30px;
+}
+.last-submit-button>button:first-child{
+    margin-right:30px;
+    background-color: #15b2ec;
+    color: #FFF;
+}
+.last-submit-button>button:last-child{
+    background-color: #b3b3b3;
+    color: #FFF;
+}
+.actived {
+    background-color: #15b2ec;
+    color: #FFF;
+}
+.back-select1,.back-select2,.back-time{
+    padding-right: 30px;
+}
+#back-select1{
+    padding-left:0;
+    margin-bottom: 15px;
+}
+.back-select2{
+    padding-left: 0;
+    margin-bottom: 15px;
+}
+#back-time{
+    padding-left: 0;
+    padding-right:0;
+    margin-bottom: 15px;
+}
+#back-time input{
+    height: 36px;
+}
+#back-input{
+    padding-left: 0;
+    padding-right:0;
+    margin-bottom: 30px;
+}
+.input-group-addon{
+    background-color: #FFF;
+    padding-left: 0;
+    border-width: 0;
+}
+#main-body .select-type,#main-body .select-status,#start,#end{
+    border-radius: 4px;
+}
+#back-input input{
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.input-group-addon{
+    color: #555;
+}
+#back-input .input-group-addon:last-child{
+    padding-left: 30px;
+    padding-right: 20px;
+    color: #FFF;
+    background-color: #15b2ec;
+    background-image: url("../../img/enterprise/home/sousuo.png");
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+.back-date{
+    padding:0;
+    height: 34px;
+}
+.back-date div{
+    color: #15b2ec;
+    line-height:34px;
+    font-size: 20px;
+    padding-left: 30px;
+    background-image: url("../../img/enterprise/home/time.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+#back-list-img{
+    padding:0;
+    height:100%;
+}
+#back-list-img>img{
+    height:auto;
+    width:100%;
+    cursor: pointer;
+}
+.back-list-text{
+    margin-left:15px;
+}
+#back-list-text{
+    padding-right:0;
+}
+#back-list-text>p:first-child{
+    color: #1b1b1b;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.back-list-text-time{
+    color:#666;
+    font-size:14px;
+}
+.back-list-text-code{
+    font-size:14px;
+    color: #333;
+}
+.back-list-text>p{
+    margin-bottom:15px;
+}
+.back-list-text-button{
+    margin-top: 20px;
+}
+.back-list-text-button>span{
+    /*float: left;*/
+    color: #FFF;
+    border-radius: 4px;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+.back-list-text-button>span:first-child{
+    background: #b48d5a;
+
+
+}
+.back-list-text-button>span:last-child{
+    background: #15b2ec;
+    margin-left:15px;
+}
+#pagination{
+    margin:0;
+}
+
+#back-list-wrapper>li:hover{
+    background-color: #ebeef3;
+}
+.datetimepicker{
+    margin-top: 34px;
+}

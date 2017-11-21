@@ -1,0 +1,81 @@
+/* upload */
+@media screen and (max-width: 768px) {
+    #form-submit>div{
+        width: 80px;
+        margin-right: 10px;
+    }
+    #form-submit{
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 15px;
+    }
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    margin-top: 20px;
+}
+.form-wrapper{
+    height: 36px;
+}
+.form-label{
+    padding: 0;
+    height:36px;
+    line-height: 36px;
+    text-align: center;
+}
+.form-div-name{
+    padding: 0;
+}
+.form-div-tool{
+    padding: 15px;
+}
+.form-div-tool>input{
+    height: 100%;
+    cursor: pointer;
+}
+.form-div-tool>span{
+    display: block;
+    padding-left: 15px;
+    padding-top:15px;
+}
+.form-submit{
+    text-align: center;
+}
+.form-submit>div{
+    margin-right: 20px;
+    width: 100px;
+}
+#clipArea{
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 280px;
+    height:280px;
+}
+#view{
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 130px;
+    height: 136px;
+    margin-bottom: 20px;
+}
+/* 弹窗 */
+#myModal{
+
+}
+#modal-dialog{
+    margin: auto;
+    position: absolute;
+    top: 30%; left: 0; bottom: 0; right: 0;
+}
+#modal-close{
+    width: 120px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.modal-body{
+    border-radius: 8px;
+}
+

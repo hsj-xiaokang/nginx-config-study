@@ -1,0 +1,147 @@
+#basic-info-caption,#basic-info-caption02{
+    margin-bottom: 20px;
+}
+#basic-info-caption>div:first-child{
+    height: 61px;
+    background-image: url("../../img/enterprise/new_product/step1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#basic-info-caption>div:last-child{
+    height: 61px;
+    background-image: url("../../img/enterprise/new_product/step2_hui.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#basic-info-caption02>div:first-child{
+    height: 61px;
+    background-image: url("../../img/enterprise/new_product/step1_hui.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#basic-info-caption02>div:last-child{
+    height: 61px;
+    background-image: url("../../img/enterprise/new_product/step2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.upload-wrapper{
+    float: left;
+    width:130px;
+    height:136px;
+    margin-right: 20px;
+    background: #FFF;
+    background-image: url("../../img/enterprise/image.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    border: 1px dashed #CCC;
+}
+.upload-movie-wrapper{
+    width:280px;
+    height:136px;
+    background: #FFF;
+    background-image: url("../../img/enterprise/video.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    border: 1px dashed #CCC;
+    position:relative;
+}
+
+.upload-movie-wrapper video{
+    object-fit:fill;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+.form-save{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-left: -15px;
+    margin-right: -15px;
+    text-align: center;
+    background-color: #FFF;
+}
+.form-save>div{
+    width: 107px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin: auto;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color:#15b2ec;
+    color:#FFF;
+}
+.productionname-error,.productionspec-error,.address-error,.productionaddress-error,.mainnutrients-error,.foodadditives-error,.pictureURL-error{
+    height: 34px;
+    line-height: 34px;
+    color: #f88844;
+    display: none;
+}
+.address-error,.pictureURL-error{
+    margin-top: 10px;
+}
+
+/* 地块 */
+.dropdown-menu {
+    margin-left: 15px;
+}
+
+
+/* 购买链接 */
+#shop-wrapper>div>div,#shop-wrapper>div>div>div {
+    padding: 0;
+}
+#shop-wrapper>div>div>div:last-child{
+    margin-top: 15px;
+}
+#shop-wrapper>div>div:not(:first-child) {
+    margin-top: 15px;
+}
+
+.shop-number,.shop-icon,.shop-path{
+    background-color: #f5f7fa;
+}
+#shop-wrapper .shop-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 32px 32px;
+    cursor: pointer;
+}
+.shop-icon-tao {
+    background-image: url("../../img/enterprise/new_product/taobao.png");
+}
+.shop-icon-tian {
+    background-image: url("../../img/enterprise/new_product/tianmao.png");
+}
+.shop-icon-jing {
+    background-image: url("../../img/enterprise/new_product/jingdong.png");
+}
+.shop-icon-four {
+    background-image: url("../../img/enterprise/new_product/shangcheng.png");
+}
+#shop-wrapper input {
+    border-radius: 4px;
+}
+
+.shop-add {
+    height: 34px;
+    background-color: #15b2ec;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 34px;
+    cursor: pointer;
+    color: #FFF;
+}
+.shop-name-wrapper {
+    padding-left: 10px;
+}
+.datetimepicker{
+    margin-top: 34px;
+}

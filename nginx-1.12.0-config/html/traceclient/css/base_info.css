@@ -1,0 +1,4 @@
+.stop-btnCrop {
+    pointer-events: none;
+    opacity: 0.5;
+}

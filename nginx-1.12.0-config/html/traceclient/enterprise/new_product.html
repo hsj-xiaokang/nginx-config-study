@@ -1,0 +1,393 @@
+<!-- 会员首页 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>农产品追溯平台</title>
+  <script>
+      var _hmt = _hmt || [];
+      (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?1b06a7889f268c3641d916f8aa6584b2";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+      })();
+  </script>
+  <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="summernote.css">
+  <link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css">
+  <link rel="stylesheet" href="zTree/css/zTreeStyle/zTreeStyle.css">
+  <link rel="stylesheet" href="../css/enterprise/common.css">
+  <link rel="stylesheet" href="../css/enterprise/new_product.css">
+  <link rel="stylesheet" href="../css/image_upload/image_upload.css">
+  <!--<link rel="stylesheet" href="../css/member_home.css">-->
+</head>
+
+<body>
+  <!-- banner -->
+  <div class="top"></div>
+  <div class="vue-container">
+    <!-- 企业头部 -->
+    <div class="page-top-wrapper"></div>
+    <!-- 面包屑 -->
+    <div class="container breadcrumb-wrapper">
+       <ol class="breadcrumb" id="breadcrumb">
+         <li><a href="../index.html">首页</a></li>
+         <li><a href="member_home.html">用户中心</a></li>
+         <li class="active" id="current-page">新建追溯档案</li>
+       </ol>
+    </div>
+    <!-- 网页主体区域 -->
+    <div class="container main-wrapper">
+      <!-- 左侧 -->
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 main-menu" id="main-menu" style="padding-left:0;"></div>
+      <!-- 标题 -->
+      <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12" id="basic-info-caption" style="padding-right:0;">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"  style="padding:0;"></div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"  style="padding:0;"></div>
+      </div>
+      <!-- 基本信息 -->
+      <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12" id="basic-info-body">
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 basic-info-body">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 products-descri">产品描述</div>
+          <form class="form-horizontal" >
+            <div class="form-group">
+              <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12  control-label"><span class="symbol">*&nbsp;</span>产品名称</label>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <input type="input" name="productionname" class="form-control" placeholder="请输入产品名称"  maxlength="50" />
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 productionname-error"></div>
+            </div>
+            <div class="form-group">
+              <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12  control-label"><span class="symbol">*&nbsp;</span>产品规格</label>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+                <input type="input" name="productionspec" class="form-control" placeholder="请输入产品规格" maxlength="50" />
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 productionspec-error"></div>
+            </div>
+            <!-- 生产地址 -->
+            <div class="form-group" id="select-wrapper">
+              <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12  control-label"><span class="symbol">*&nbsp;</span>生产地址</label>
+
+              <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6 address-list">
+                <select class="province-produce form-control"></select>
+              </div>
+              <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6 address-list">
+                <select class="city-produce form-control" style="display:none;"></select>
+              </div>
+              <div class="col-lg-2 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-6 col-xs-offset-0 address-list address-list03" id="address-list03">
+                <select class="area-produce form-control" style="display:none;"></select>
+              </div>
+              <div class="col-lg-2 col-lg-offset-0 col-md-3 col-md-offset-2 col-sm-5 col-sm-offset-0 col-xs-6 col-xs-offset-0 address-list address-list04" id="address-list04">
+                <select class="street-produce form-control" style="display:none;"></select>
+              </div>
+              <div class="col-lg-10 col-lg-offset-2 col-md-10 col-md-offset-2 col-sm-10 col-sm-offset-2 col-xs-12 address-error"></div>
+            </div>
+            <!-- 补充的生产地址 -->
+            <div class="form-group">
+              <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12  control-label"></label>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+                <textarea class="form-control"
+                          rows="2"
+                          name="productionaddress"
+                          placeholder="请补充街道地址"
+                          maxlength="50"
+                ></textarea>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 productionaddress-error"></div>
+            </div>
+
+            <!-- 地块 -->
+
+            <div class="form-group">
+              <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12  control-label">地块选择</label>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 dropdown">
+                <input
+                  type="text"
+                  name=""
+                  class="form-control"
+                  placeholder="请选择地块"
+                  maxlength="50"
+                  data-toggle="dropdown"
+                  id="tree-input"
+                  onkeyup="autoMatch(this)"
+                />
+                <div class="dropdown-menu ztree" id="dropdown-menu" data-stopPropagation="true">
+
+                </div>
+              </div>
+
+
+            </div>
+
+
+            <div class="form-group">
+              <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12  control-label">生产标准号</label>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+                <input type="text" name="productionstandardno" class="form-control" placeholder="请输入生产标准号" maxlength="50" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12  control-label">生产许可证号</label>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+                <input type="text" name="productionlicenceno" class="form-control" placeholder="请输入生产许可证号" maxlength="50" />
+              </div>
+            </div>
+
+
+
+
+
+            <div class="form-group">
+              <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12  control-label">质量负责人</label>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+                <input type="text" name="qualitymanager" class="form-control" placeholder="请输入质量负责人" maxlength="50" />
+              </div>
+            </div>
+
+
+
+            <div class="form-group">
+              <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12  control-label"><span class="symbol">*&nbsp;</span>主要营养成分</label>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+                 <textarea class="form-control"
+                           rows="4"
+                           name="mainnutrients"
+                           placeholder="请填写主要营养成分"
+                           maxlength="800"
+                 ></textarea>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 mainnutrients-error"></div>
+            </div>
+            <div class="form-group">
+              <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12  control-label">食卫证号</label>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+                <input  name="fhcertificateno" type="text" class="form-control" placeholder="请输入食品卫生证号" maxlength="50" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12  control-label">品牌</label>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+                <input type="text" name="productionbrand" class="form-control" placeholder="请输入产品所属品牌名称" maxlength="50" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12  control-label">生产日期</label>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+                <input name="productiondate" type="text" class="form-control" placeholder="请选择生产日期" maxlength="20" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12  control-label"><span class="symbol">*&nbsp;</span>食品添加剂</label>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+                <textarea class="form-control"
+                          rows="4"
+                          name="foodadditives"
+                          placeholder="请填写食品添加剂"
+                          maxlength="600"
+                ></textarea>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 foodadditives-error"></div>
+            </div>
+            <div class="form-group">
+              <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12  control-label"><span class="symbol">*&nbsp;</span>产品示例图</label>
+              <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12" id="products-test-image-wrapper">
+                <div class="upload-wrapper" data-id="1" id="picture1URL"></div>
+                <div class="upload-wrapper" data-id="2" id="picture2URL"></div>
+                <div class="upload-wrapper" data-id="3" id="picture3URL"></div>
+              </div>
+              <div class="col-lg-10 col-lg-offset-2 col-md-10 col-md-offset-2 col-sm-10 col-sm-offset-2 col-xs-12 pictureURL-error">12312</div>
+            </div>
+            <!-- 购买链接 -->
+            <div class="form-group">
+              <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12  control-label">购买链接</label>
+              <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12" id="shop-wrapper">
+                <div class="shop-main">
+
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 shop">
+                    <div class="col-lg-7 col-md-8 col-sm-9 col-xs-12">
+                      <div class="input-group">
+                        <div class="input-group-addon shop-number">店铺1:</div>
+                        <div class="input-group-addon shop-icon shop-icon-tao" id="shop-icon-1" data-src=""></div>
+                        <div class="shop-name-wrapper">
+                          <input class="form-control" value="淘宝店铺"/>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="col-lg-7 col-md-8 col-sm-9 col-xs-12">
+                      <div class="input-group">
+                        <div class="input-group-addon shop-path">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        <input class="form-control" placeholder="请输入店铺地址"/>
+                      </div>
+                    </div>
+
+
+                  </div>
+
+                  <div class="col-md-12 col-md-12 col-sm-12 col-xs-12 shop">
+                    <div class="col-lg-7 col-md-8 col-sm-9 col-xs-12">
+                      <div class="input-group">
+                        <div class="input-group-addon shop-number">店铺2:</div>
+                        <div class="input-group-addon shop-icon shop-icon-tian"  id="shop-icon-2"></div>
+                        <div class="shop-name-wrapper">
+                          <input class="form-control" value="天猫店铺"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-7 col-md-8 col-sm-9 col-xs-12">
+                      <div class="input-group">
+                        <div class="input-group-addon shop-path">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        <input class="form-control" placeholder="请输入店铺地址"/>
+                      </div>
+                    </div>
+
+
+                  </div>
+
+                  <div class="col-md-12  col-md-12 col-sm-12 col-xs-12 shop">
+                    <div class="col-lg-7 col-md-8 col-sm-9 col-xs-12">
+                      <div class="input-group">
+                        <div class="input-group-addon shop-number">店铺3:</div>
+                        <div class="input-group-addon shop-icon shop-icon-jing"  id="shop-icon-3"></div>
+                        <div class="shop-name-wrapper">
+                          <input class="form-control" value="京东店铺"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-7 col-md-8 col-sm-9 col-xs-12">
+                      <div class="input-group">
+                        <div class="input-group-addon shop-path">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        <input class="form-control" placeholder="请输入店铺地址"/>
+                      </div>
+                    </div>
+
+
+                  </div>
+
+                  <div class="col-md-12  col-md-12 col-sm-12 col-xs-12 shop">
+                    <div class="col-lg-7 col-md-8 col-sm-9 col-xs-12">
+                      <div class="input-group">
+                        <div class="input-group-addon shop-number">店铺4:</div>
+                        <div class="input-group-addon shop-icon shop-icon-four"  id="shop-icon-4"></div>
+                        <div class="shop-name-wrapper">
+                          <input class="form-control" value="" placeholder="请输入店铺名称"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-7 col-md-8 col-sm-9 col-xs-12">
+                      <div class="input-group">
+                        <div class="input-group-addon shop-path">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        <input class="form-control" placeholder="请输入店铺地址"/>
+                      </div>
+                    </div>
+
+
+                  </div>
+
+
+
+
+                </div>
+
+                <!-- + -->
+                <div class="col-md-12  col-md-12 col-sm-12 col-xs-12">
+                  <div class="col-lg-7 col-md-8 col-sm-9 col-xs-12">
+                    <div class="input-group">
+                      <div class="input-group-addon shop-number">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                      <div class="shop-add">
+                        <i class="glyphicon glyphicon-plus"></i>
+                        添加
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+              <div class="col-lg-10 col-lg-offset-2 col-md-10 col-md-offset-2 col-sm-10 col-sm-offset-2 col-xs-12 shop-error"></div>
+            </div>
+
+
+            <div class="form-group">
+              <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12  control-label">产品主视频</label>
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="upload-movie-wrapper" id="videopath" data-id="4">
+                  <video controls src=""></video>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" style="padding-bottom:20px;">
+              <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12  control-label">详细描述</label>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="summernote" id="summernote">
+
+                </div>
+                <!--<textarea class="form-control summernote"
+                          rows="4"
+                          id="description"
+                          placeholder="详细描述"
+                          maxlength="200"
+                ></textarea>-->
+              </div>
+            </div>
+          </form>
+          <div class="form-save">
+            <div>下一步</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 上传照片 -->
+      <div class="upload-file"></div>
+
+      <!-- 模态框 - 错误提示 -->
+      <!--<div class="modal" id="myModal-error" tabindex="-1">
+        &lt;!&ndash; 窗口声明 &ndash;&gt;
+        <div class="modal-dialog modal-sm" style="margin-top:17%;">
+          &lt;!&ndash; 内容声明 &ndash;&gt;
+          <div class="modal-content">
+            &lt;!&ndash; 头部 &ndash;&gt;
+            <div class="modal-header">
+              <button type="button" class="close"
+                      data-dismiss="modal">
+                <span>&times;</span>
+              </button>
+              <h4 class="modal-title text-center">提示信息</h4>
+            </div>
+            &lt;!&ndash; 主体 &ndash;&gt;
+            <div class="modal-body text-center">
+              <p class="errorInfo"></p>
+              <div style="margin-top:20px;margin-bottom:20px;">
+                <span class="modal-button">确定</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>-->
+
+    </div>
+  </div>
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../js/edit/summernote.js"></script>
+  <script src="../js/edit/summernote-zh-CN.js"></script>
+  <script src="../common/js/set_timeout.js"></script>
+  <script src="../js/date/bootstrap-datetimepicker.min.js"></script>
+  <script src="../js/date/bootstrap-datetimepicker.zh-CN.js"></script>
+  <script src="zTree/js/jquery.ztree.core.min.js"></script>
+  <script src="../vendor/vue/vue.js"></script>
+  <script src="../common/js/commjs.js"></script>
+  <script src="../common/js/load_common_html.js"></script>
+  <script src="../common/js/util.js"></script>
+  <script src="../common/js/load_upload_html.js"></script>
+  <script src="../js/new_product.js"></script>
+</body>
+
+</html>

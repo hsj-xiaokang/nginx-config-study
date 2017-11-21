@@ -1,0 +1,120 @@
+/* 添加防伪码 */
+#addfackcode-wrapper{
+    padding-right: 0;
+}
+.addfackcode-caption{
+    color: #965705;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+.addfackcode-body{
+    background-color: #f5f7fa;
+}
+.addfackcode-image{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.addfackcode-image img{
+    width: 100%;
+    height: auto;
+}
+.addfackcode-text{
+}
+
+.addfackcode-input{
+    list-style: none;
+}
+.addfackcode-input-caption{
+    background-color: #f5f7fa;
+}
+.addfackcode-input-wrapper{
+    padding-right: 20px;
+}
+#addfackcode-input-wrapper input{
+    border-radius: 4px;
+}
+#addfackcode-input{
+    padding: 0;
+    padding-top: 10px;
+}
+
+input[name="addfackcode"]{
+    height: 34px;
+    width: 100%;
+    padding-left: 15px;
+}
+#addfackcode-submit{
+    color: #FFF;
+    background-color: #15b2ec;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.addfackcode-error{
+    height: 34px;
+    margin-top: 10px;
+    line-height: 34px;
+    color: red;
+}
+.addfackcode-history{
+    list-style: none;
+    padding-left: 60px;
+    padding-right: 0;
+}
+#addfackcode-history{
+    /* padding-left: 60px;
+     padding-right: 0;*/
+}
+.addfackcode-history>li>div{
+    float:left;
+    margin-right: 15px;
+}
+.addfackcode-history>li>div:last-child{
+    cursor: pointer;
+    color: #15b2ec;
+}
+#addfackcode-input .li04{
+    color:  red;
+}
+/* 防伪码历史 */
+#addfackcode-history>li>div{
+    margin-left: 40px;
+}
+.history-icon span:first-child {
+    display: block;
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 4px solid #9a9a9a;
+}
+.history-icon span:last-child{
+    display: block;
+    background-color: #9a9a9a;
+    width: 2px;
+    height: 30px;
+    margin: auto;
+}
+.addfackcode-list{
+    color:#9a9a9a;
+    font-size: 16px;
+}
+.addfackcode-list:first-child{
+    color: #000;
+
+}
+.addfackcode-list:first-child .history-icon span:first-child{
+    border-color: #00a2ae;
+}
+.history-number{
+    min-width: 150px;
+}
+.history-date{
+    min-width: 155px;
+}
+.download-erweima{
+    margin-left: 15px;
+}

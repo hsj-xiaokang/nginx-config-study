@@ -1,0 +1,81 @@
+﻿{
+    error: 0,
+    status: "success",
+    date: "2014-04-18",
+    results: [
+        {
+            currentCity: "嘉兴",
+            weather_data: [
+                {
+                    date: "今天（周三）",
+                    dayPictureUrl: "http://api.map.baidu.com/images/weather/day/duoyun.png",
+                    nightPictureUrl: "http://api.map.baidu.com/images/weather/night/duoyun.png",
+                    weather: "多云",
+                    wind: "微风",
+                    temperature: "23℃"
+                },
+                {
+                    date: "明天（周四）",
+                    dayPictureUrl: "http://api.map.baidu.com/images/weather/day/leizhenyu.png",
+                    nightPictureUrl: "http://api.map.baidu.com/images/weather/night/zhongyu.png",
+                    weather: "雷阵雨转中雨",
+                    wind: "微风",
+                    temperature: "29～22℃"
+                },
+                {
+                    date: "后天（周五）",
+                    dayPictureUrl: "http://api.map.baidu.com/images/weather/day/yin.png",
+                    nightPictureUrl: "http://api.map.baidu.com/images/weather/night/duoyun.png",
+                    weather: "阴转多云",
+                    wind: "微风",
+                    temperature: "31～23℃"
+                },
+                {
+                    date: "大后天（周六）",
+                    dayPictureUrl: "http://api.map.baidu.com/images/weather/day/duoyun.png",
+                    nightPictureUrl: "http://api.map.baidu.com/images/weather/night/duoyun.png",
+                    weather: "多云",
+                    wind: "微风",
+                    temperature: "31～24℃"
+                }
+            ]
+        },
+        {
+            currentCity: "合肥市",
+            weather_data: [
+                {
+                    date: "今天（周三）",
+                    dayPictureUrl: "http://api.map.baidu.com/images/weather/day/duoyun.png",
+                    nightPictureUrl: "http://api.map.baidu.com/images/weather/night/duoyun.png",
+                    weather: "多云",
+                    wind: "东风3-4级",
+                    temperature: "27℃"
+                },
+                {
+                    date: "明天（周四）",
+                    dayPictureUrl: "http://api.map.baidu.com/images/weather/day/duoyun.png",
+                    nightPictureUrl: "http://api.map.baidu.com/images/weather/night/duoyun.png",
+                    weather: "多云",
+                    wind: "东北风3-4级",
+                    temperature: "35～27℃"
+                },
+                {
+                    date: "后天（周五）",
+                    dayPictureUrl: "http://api.map.baidu.com/images/weather/day/duoyun.png",
+                    nightPictureUrl: "http://api.map.baidu.com/images/weather/night/duoyun.png",
+                    weather: "多云",
+                    wind: "南风",
+                    temperature: "35～27℃"
+                },
+                {
+                    date: "大后天（周六）",
+                    dayPictureUrl: "http://api.map.baidu.com/images/weather/day/duoyun.png",
+                    nightPictureUrl: "http://api.map.baidu.com/images/weather/night/duoyun.png",
+                    weather: "多云",
+                    wind: "东风",
+                    temperature: "34～27℃"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,312 @@
+	<!-- 会员首页 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>农产品追溯平台</title>
+	<script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?1b06a7889f268c3641d916f8aa6584b2";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+	</script>
+	<link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" href="../css/enterprise/common.css">
+	<link rel="stylesheet" href="../css/enterprise/memeber_home.css">
+	<link rel="stylesheet" href="../css/pagination/zxf_page.css">
+	<!--<link rel="stylesheet" href="../css/member_home.css">-->
+	<script src="../vendor/vue/vue.js"></script>
+</head>
+<body>
+
+	<!-- banner -->
+	<div class="top"></div>
+
+	<div class="vue-container" id="box">
+		<!-- 企业头部 -->
+		<div class="page-top-wrapper"></div>
+
+		<!-- 面包屑 -->
+		<div class="container breadcrumb-wrapper" >
+			 <ol class="breadcrumb" id="breadcrumb">
+				<li><a href="../index.html">首页</a></li>
+				<li><a href="../enterprise/total.html">用户中心</a></li>
+				<li class="active" id="current-page">扫描统计</li>
+			 </ol>
+		</div>
+		<!-- 网页主体区域 -->
+		<div class="container" >
+			<img :src="thisData.img" style="width: 240px;height: 200px;float: left" />
+			<div style="float: left;margin-left: 50px;">
+				<p style="font-size: 18px;color: #333;font-weight:700;margin-top: 20px;margin-bottom: 20px" v-text="thisData.detail"></p>
+				<p style="font-size: 14px;color: #333"><span style="color: #999;">追溯码:&nbsp;</span>{{thisData.code}}</p>
+				<p style="font-size: 14px;color: #333"><span style="color: #999;">扫描次数:&nbsp;</span>{{thisData.count}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #999;">扫描设备:&nbsp;</span>{{thisData.tCount}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #999;">扫描人数:&nbsp;</span>{{thisData.pCount}}</p>
+				<p style="font-size: 14px;color: #333"><span style="color: #999;">扫描地点:&nbsp;</span>{{sheng}}</p>
+				<p style="font-size: 14px;color: #333"><span style="color: #999;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>{{shi}}</p>
+			</div>
+		</div>
+		<div class="container">
+			<div style="width: 100%;height: 40px;background-color: #f5faf7;margin-top: 20px;">
+				<div style="width: 100px;line-height:40px;text-align:center;background-color: #0eaae5;color:white">扫描详情</div>
+				<div style="padding-top: 20px;padding-bottom: 20px;">
+					<div style="float: left;padding-left: 0px;">
+						<label style="display: inline-block">产品&nbsp;&nbsp;</label>
+						<select class="form-control" style="width:120px;display: inline-block">
+							<option>全部</option>
+							<option>A类</option>
+							<option>B类</option>
+							<option>C类</option>
+						</select>
+					</div>
+					<div style="float: left;padding-left: 20px;">
+						<label style="display: inline-block">时间&nbsp;&nbsp;</label><input type="input" style="width:120px;display: inline-block" class="form-control"  placeholder="全部"  maxlength="50" />-
+						<input type="input" style="width:120px;display: inline-block" class="form-control"  placeholder="全部"  maxlength="50" />
+					</div>
+					<div style="float: left;padding-left: 20px;">
+						<label style="display: inline-block">排序&nbsp;&nbsp;</label><select class="form-control" style="width:120px;display: inline-block">
+								<option>按时间</option>
+								<option>按扫描次数</option>
+								<option>按扫描人数</option>
+								<option>按扫描终端</option>
+							</select>
+					</div>
+				</div>
+				<br/>
+				<br/>
+				<p style="float: left;margin-top: 0px;margin-bottom: 20px;color: #999">共检索到<span style="color:#0eaae5">783</span>条数据</p>
+				<table class="table table-striped" style="border:1px solid #eee;border-radius: 2px;">
+					<thead style="background-color: #0eaae5;color: #ffffff;border:1px solid #0eaae5;height: 55px;">
+						<tr style="text-align: center">
+							<th style="border-bottom-color: #0eaae5">序号</th>
+							<th style="border-bottom-color: #0eaae5">扫描IP</th>
+							<th style="border-bottom-color: #0eaae5">扫描地址</th>
+							<th style="border-bottom-color: #0eaae5">运营商</th>
+							<th style="border-bottom-color: #0eaae5">设备</th>
+							<th style="border-bottom-color: #0eaae5">扫描时间</th>
+						</tr>
+					</thead>
+					<tbody style="font-size: 12px">
+					<tr v-for="i in list1" style="height: 30px;">
+						<td v-text="i.id" style="line-height: 25px;border-right: 1px solid #eee"></td>
+						<td v-text="i.ipx" style="line-height: 25px;border-right: 1px solid #eee"></td>
+						<td v-text="i.addressx" style="line-height: 25px;border-right: 1px solid #eee"></td>
+						<td v-text="i.yunyingshangx" style="line-height: 25px;border-right: 1px solid #eee"></td>
+						<td v-text="i.devicex" style="line-height: 25px"></td>
+						<td v-text="i.time" style="line-height: 25px"></td>
+					</tr>
+					
+				</table>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		Date.prototype.Format = function (fmt) {
+		    var o = {
+		        "M+": this.getMonth() + 1, //月份
+		        "d+": this.getDate(), //日
+		        "h+": this.getHours(), //小时
+		        "m+": this.getMinutes(), //分
+		        "s+": this.getSeconds(), //秒
+		        "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+		        "S": this.getMilliseconds() //毫秒
+		    };
+		    if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+		    for (var k in o)
+		        if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+		    return fmt;
+		}
+		new Vue({
+			el:'#box',
+			data(){
+				return{
+					ip:[
+						"112.115.28.98",
+					    "112.121.22.18",
+					    "122.15.28.138",
+					    "111.95.122.31",
+					    "110.135.88.81",
+					    "112.45.29.76",
+					    "110.114.11.58",
+					    "110.113.23.18",
+					    "112.11.123.95",
+					    "112.15.128.48",
+					    "121.111.28.58",
+					    "111.15.128.28",
+					    "111.15.21.92",
+					    "110.15.27.95",
+					    "112.15.29.81",
+					    "114.111.28.98",
+					    "110.17.51.56",
+					    "114.55.25.88",
+					    "114.15.21.83",
+					    "114.11.21.94"
+				    ],
+				    address:[
+					    "北京", 
+						"云南省昆明市",
+						"云南省曲靖市",
+						"云南省保山市",
+						"云南省昭通市",
+						"云南省文山市",
+						"广东省深圳市",
+						"广东省汕头市",
+						"广东省佛山市",
+						"广东省湛江市",,
+						"广东省珠海市",
+						"广东省惠州市",
+						"广东省东莞市",
+						"广东省中山市",
+						"广东省潮州市",
+						"湖南省长沙市",
+						"湖南省岳阳市",
+						"湖南省益阳市",
+						"湖南省邵阳市",
+						"湖南省吉首市",
+						"湖南省衡阳市",
+						"湖南省怀化市",
+						"湖南省株洲市",
+						"四川省成都市",
+						"四川省乐山市",
+						"四川省泸州市",
+						"四川省宜宾市",
+						"四川省自贡市",
+						"四川省攀枝花市",
+						"四川省广元市",
+						"四川省遂宁市",
+						"四川省广安市",
+						"四川省内江市",
+						"新疆省克拉玛依市",
+						"新疆省吐鲁番地区",
+						"新疆省哈密地区",
+						"新疆省和田地区",
+						"新疆省阿克苏地区",
+						"新疆省昌吉回族自治州",
+						"新疆省克孜勒苏柯尔克孜自治州",
+						"湖北省黄石市",
+						"湖北省荆州市",
+						"湖北省襄樊市",
+						"湖北省鄂州市",
+						"湖北省荆门市",
+						"内蒙古包头市",
+						"内蒙古呼伦贝尔",
+						"内蒙古兴安盟",
+						"内蒙古赤峰市",
+						"广西省南宁市",
+						"广西省北海市",
+						"广西省桂林市"
+				    ],
+				    device: [
+				    	"iphone 6",
+						"iphone 6s",
+						"iphone 6p",
+						"iphone 7",
+						"iphone 7p",
+						"iphone 5",
+						"iphone 5S",
+						"iphone 6sp",
+						"mi 4",
+						"mi 5",
+						"mx 4",
+						"mx 5",
+						"mx 6",
+						"huawei p8",
+						"huaiwei p9",
+						"samsung galaxy7",
+						"samsung galaxy6",
+						"samsung note2",
+						"samsung note3",
+						"samsung note4",
+						"samsung note5",
+						"vivo x6",
+						"vivo x7",
+						"vivo x8",
+						"vivo x9",
+						"oppo R7",
+						"oppo R8",
+						"oppo R9",
+						"oppo R10"
+				    ],
+				    list1:[]
+				}
+			},
+			computed:{
+				thisData:function(){
+					return JSON.parse(localStorage.getItem("xx"));
+				},
+				sheng:function(){
+					if (this.thisData.name === "明春他披梨"){
+						return "15个省(广西、内蒙古、湖北、新疆、四川、湖南、广东、云南、山西、山东、江苏、江西、河北、辽宁、浙江)";
+					}else if(this.thisData.name === "晶弘小米辣"){
+						//10个省/16个市区 
+						return "10个省(云南、内蒙古、湖北、新疆、四川、湖南、广东、云南、山西、山东)";
+					}else{
+						return "";
+					}
+				},
+				shi:function(){
+					if (this.thisData.name === "明春他披梨"){
+						return "26个市区(南宁、桂林、呼伦贝尔、包头、赤峰、北海、武汉、石子河、成都、长沙、广州、太原等)";
+					}else if(this.thisData.name === "晶弘小米辣"){
+						return "16个市区(昆明、太原、济南、青岛、苏州、南京、九江、芜湖、南昌、石家庄、沈阳、杭州、温州、宁波、丽水、绍兴)";
+					}else{
+						return "";
+					}
+				}
+			},
+			mounted(){
+				console.log(this.sheng);
+
+				console.log(this.shi);
+				for(let i=0;i<=6;i++){
+					let tmp = {};
+					tmp.id = i;
+					tmp.ipx = this.randomData(this.ip);
+					tmp.addressx = this.randomData(this.address);
+					tmp.yunyingshangx = this.randomData(['移动','电信','联通']);
+					tmp.devicex = this.randomData(this.device);
+					tmp.time = this.randomDate();
+					this.list1.push(tmp)
+				}
+			},
+			methods:{
+				createData(){
+					let tmpJson = [];
+				},
+				randomData(i){
+					return i[parseInt(Math.random()*i.length,10)]
+				},
+				randomDate(){
+					let d1 = new Date("2017-10-1,00:00:00");
+					let d2 = new Date("2017-10-30,23:59:59");
+					let d3 = new Date(parseInt(Math.random()*(d2.getTime()-d1.getTime())+d1.getTime())); 
+					return d3.Format("yyyy-MM-dd hh:mm:ss")
+				}
+			}
+		})
+
+	</script>
+
+
+	<script src="../vendor/jquery/jquery.min.js"></script>
+	<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../js/date/bootstrap-datetimepicker.min.js"></script>
+	<script src="../js/date/bootstrap-datetimepicker.zh-CN.js"></script>
+	<script src="../common/js/load_upload_html.js"></script>
+	<script src="../common/js/set_timeout.js"></script>
+	<script src="../js/jqPaginator.min.js"></script>
+	<script src="../common/js/commjs.js"></script>
+	<script src="../common/js/load_common_html.js"></script>
+	<script src="../js/pagination/zxf_page.js"></script>
+	<script src="../common/js/util.js"></script>
+	<script src="../js/member_home.js"></script>
+</body>
+
+</html>

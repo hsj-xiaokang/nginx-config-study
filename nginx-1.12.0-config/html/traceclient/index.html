@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <script>
+      var _hmt = _hmt || [];
+      (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?1b06a7889f268c3641d916f8aa6584b2";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+      })();
+  </script>
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link href="css/freelancer.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/jquery.fullPage.css">
+  <link rel="stylesheet" href="css/index.css">
+  <title>农产品追溯平台</title>
+  <style>
+    .index{
+      font-size: 14px !important;
+    }
+  </style>
+</head>
+
+<body id="page-top" class="index">
+
+  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom" style="height:90px;padding-top: 35px;background-color: rgba(0, 0, 0, 0.7);">
+    <div class="container" >
+      <div class="navbar-header page-scroll nav-head">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="filter:alpha(Opacity=80);-moz-opacity:0.5;opacity: 0.8;">
+        <a href="index.html" style="display: block;">
+          <img class="navbar-brand" src="img/banner/favicon.ico">
+        </a>
+        <a href="index.html" style="display: block;">
+          <img class="navbar-brand" src="img/banner/logowz.png">
+        </a>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="page-scroll">
+            <a href="index.html" style="color:#0daae4;">首页</a>
+          </li>
+          <li class="page-scroll">
+            <a href="good_product.html">精选产品</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- banner -->
+  <div class="top"></div>
+  <!-- 全屏滚动 -->
+  <ul id="menu">
+    <li data-menuanchor="page1">
+      <a href="#page1" class="active" title="防伪查询"></a>
+    </li>
+    <li data-menuanchor="page2" id="menu-a-second">
+      <a href="#page2" title="首页广告"></a>
+    </li>
+    <li data-menuanchor="page3" id="menu-a-three">
+      <a href="#page3" title="平台介绍"></a>
+    </li>
+    <li data-menuanchor="page4" id="menu-a-four">
+      <a href="#page4" title="操作说明"></a>
+    </li>
+    <li data-menuanchor="page5">
+      <a href="#page5" title="如何加入"></a>
+    </li>
+  </ul>
+  <div id="dowebok">
+    <div class="section section1">
+      <div class="container search-wrapper" id="search-wrapper">
+        <div class="row">
+          <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-12 col-xs-12" id="section1-col">
+            <span class="section1-span">追溯码&nbsp;&nbsp;/&nbsp;&nbsp;验证码</span>
+            <div class="input-group input-group-lg">
+              <input type="text"
+                     class="form-control"
+                     id="section1-input"
+                     placeholder="请输入追溯码/验证码"
+                     maxlength="18"
+              />
+              <span class="input-group-addon " id="section1-button">
+                <span style="padding-left:30px;padding-right:10px;">查询</span>
+              </span>
+            </div>
+            <span class="section1-error" style="display:none;">追溯码或者验证码不能为空</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section section2">
+      <div class="container section2-wrapper" id="section2-wrapper" style="display: none;">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="section2-col" style="padding-right:0;">
+
+            <div v-for="advert in adverts" class="col-lg-4 col-md-4 col-sm-4 col-xs-12 advert-wrapper" id="advert-wrapper" style="padding:15px;">
+              <div @click="clickProduct(advert.id)" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"  style="padding:15px;background:#f8f6f7;">
+                <img class="advert-image" :src="advert.picture"/>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left:0;padding-right:0;padding-top:10px;">
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 enterprise-caption-wrapper" style="padding:0;">
+                    <img :src="advert.enterpriselogourl" class="enterprise-caption img-circle" style="width:100%;height:auto;"/>
+                  </div>
+                  <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 enterprise-text-wrapper">
+                    <span :title="advert.productionname" v-text="advert.productionname"></span>
+                    <span :title="advert.enterprisename" v-text="advert.enterprisename"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="section section3"></div>
+    <div class="section section4"></div>
+    <div class="section section5"></div>
+  </div>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="js/jquery.fullPage.min.js"></script>
+  <script src="vendor/vue/vue.js"></script>
+  <script src="common/js/commjs.js"></script>
+  <script src="common/js/load_common_html.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>

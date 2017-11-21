@@ -1,0 +1,270 @@
+<!-- 会员首页 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>农产品追溯平台</title>
+  <script>
+      var _hmt = _hmt || [];
+      (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?1b06a7889f268c3641d916f8aa6584b2";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+      })();
+  </script>
+  <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css">
+  <link rel="stylesheet" href="../css/enterprise/common.css">
+  <link rel="stylesheet" href="../css/enterprise/new_product2.css">
+  <!--<link rel="stylesheet" href="../css/member_home.css">-->
+</head>
+
+<body>
+  <!-- banner -->
+  <div class="top"></div>
+  <!-- 企业头部 -->
+  <div class="page-top-wrapper"></div>
+  <!-- 面包屑 -->
+  <div class="container breadcrumb-wrapper">
+     <ol class="breadcrumb" id="breadcrumb">
+       <li><a href="../index.html">首页</a></li>
+       <li><a href="member_home.html">用户中心</a></li>
+       <li class="active" id="current-page">新建追溯档案</li>
+     </ol>
+  </div>
+  <!-- 网页主体区域 -->
+  <div class="container main-wrapper">
+    <!-- 左侧 -->
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 main-menu" id="main-menu"></div>
+    <!-- 标题 -->
+    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12" id="basic-info-caption02" style="padding-right:0;">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"  style="padding:0;"></div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"  style="padding:0;"></div>
+    </div>
+    <!-- 基本信息 -->
+    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12" id="basic-info-body">
+      <!-- 产品批次 -->
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-batch-wrapper" id="product-batch-wrapper">
+        <span class="col-lg-12 col-md-12 col-sm-12 col-xs-12 batch-caption">产品批次</span>
+        <form class="form-horizontal">
+          <div class="form-group batch-form" id="batch-form">
+            <label class="col-lg-3 col-md-3 col-sm-3 col-xs-12 control-label">产品批次号</label>
+            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+              <input type="text" name="productionbatchno" class="form-control" placeholder="请输入产品批次号" maxlength="30"/>
+            </div>
+          </div>
+          <div class="form-group batch-form" id="batch-form2">
+            <label class="col-lg-3 col-md-3 col-sm-3 col-xs-12 control-label">本批次产品数量</label>
+            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+              <input type="number" name="productionbatchnumber" class="form-control" placeholder="请输入产品数量" maxlength="15"/>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- 产品认证 -->
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-authentication-wrapper" id="product-authentication-wrapper">
+        <span class="col-lg-12 col-md-12 col-sm-12 col-xs-12 authentication-caption">产品认证</span>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 authentication-main" id="authentication-main">
+
+          <!--<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-attestation-id="1">
+            <div>
+              <div class="authentication-name-wrapper">中国有机产品</div>
+            </div>
+          </div>-->
+        </div>
+      </div>
+      <!-- 产销过程 -->
+      <!--<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-process-wrapper" id="product-process-wrapper">
+        <span class="col-lg-12 col-md-12 col-sm-12 col-xs-12 process-caption">产销过程</span>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 process-main" id="process-main">
+
+          <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-process-id="1">
+            <div  id="data-process-0">
+
+              <div class="process-name-wrapper">第1步</div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-process-id="2">
+            <div id="data-process-1">
+
+              <div class="process-name-wrapper">第2步</div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-process-id="3">
+            <div id="data-process-2">
+
+              <div class="process-name-wrapper">第3步</div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-process-id="4">
+            <div id="data-process-3">
+
+              <div class="process-name-wrapper">第4步</div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-process-id="5">
+            <div id="data-process-4">
+
+              <div class="process-name-wrapper">第5步</div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-process-id="6">
+            <div id="data-process-5">
+
+              <div class="process-name-wrapper">第6步</div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-process-id="7">
+            <div id="data-process-6">
+
+              <div class="process-name-wrapper">第7步</div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-process-id="8">
+            <div  id="data-process-7">
+
+              <div class="process-name-wrapper">第8步</div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-process-id="9">
+            <div  id="data-process-8">
+
+              <div class="process-name-wrapper">第9步</div>
+            </div>
+          </div>
+         &lt;!&ndash; <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+            <div>
+              <ul class="process-placeholder-wrapper">
+                <li>最多只能</li>
+                <li>上传9张图片</li>
+              </ul>
+            </div>
+          </div>&ndash;&gt;
+
+        </div>
+      </div>-->
+
+      <!-- 生产过程 -->
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-process-wrapper" id="product-process-wrapper">
+        <span class="col-lg-12 col-md-12 col-sm-12 col-xs-12 process-caption">产销过程</span>
+        <!-- 图片预览 -->
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 process-preview-wrapper" id="process-preview-wrapper">
+
+          <!--<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <span class="col-lg-12 col-md-12 col-sm-12 col-xs-12 process-preview-caption">
+              <span>测土</span>
+              <span class="process-date">2002-07-01</span>
+              <span class="process-edit">编辑</span>
+            </span>
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 process-preview-image">
+              <div class="image-number"><span>9</span>&nbsp;张</div>
+              <img src="../img/index/index_bg.jpg">
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 process-preview-text">
+
+            </div>
+          </div>-->
+
+        </div>
+        <!-- 添加区域 -->
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 process-add-main" id="process-add-main">
+          <div>
+            <form class="form-horizontal" id="processForm">
+              <!-- 作业名称 -->
+              <div class="form-group">
+                <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12  control-label"><span class="symbol">*&nbsp;</span>作业名称</label>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                  <input type="text" name="stepname" class="form-control" placeholder="测土、育苗或播种" maxlength="5"/>
+                  <input type="hidden" name="hidden" value=""/>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 stepname-error"></div>
+              </div>
+              <!-- 作业时间 -->
+              <div class="form-group">
+                <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12  control-label"><span class="symbol">*&nbsp;</span>作业时间</label>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                  <input type="text" name="workeddate" class="form-control" placeholder="请选择作业时间"  maxlength="16" />
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 workeddate-error"></div>
+              </div>
+              <!-- 作业图片 -->
+              <div class="form-group">
+                <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12  control-label"><span class="symbol">*&nbsp;</span>作业图片</label>
+                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 process-image">
+
+                  <div class="col-lg-3 col-md-3 col-sm-4 col-xs-4 process-image-first">
+                    <div class="add-image"></div>
+                  </div>
+                  <!-- 图片为空提示 -->
+                  <span class="resourceList-error"></span>
+                </div>
+               <!-- <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 productionname-error"></div>-->
+              </div>
+              <!-- 作业记录 -->
+              <div class="form-group">
+                <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12  control-label"><span class="symbol">*&nbsp;</span>作业记录</label>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                   <textarea class="form-control"
+                             rows="4"
+                             name="workedcontent"
+                             placeholder="请输入作业记录,120个字以内"
+                             maxlength="120"
+                   ></textarea>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 workedcontent-error"></div>
+              </div>
+              <!-- 完成 -->
+              <div class="form-group">
+                <label class="col-lg-2 col-md-2 col-sm-2 col-xs-12  control-label"></label>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                  <div class="process-ad-submit">完成</div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- 添加按钮 -->
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 process-preview-add" id="process-preview-add">
+          <span class="preview-add-submit"><i class="glyphicon glyphicon-plus"></i>&nbsp;&nbsp;添加</span>
+        </div>
+
+      </div>
+
+
+
+      <!-- 完成 -->
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-submit-wrapper">
+        <span class="product-submit-wrapper product-back">上一步</span>
+        <span class="product-submit-wrapper product-submit">完成</span>
+      </div>
+    </div>
+    <!-- 添加成功页面 -->
+    <div style="display:none;" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center login-success-wrapper success-wrapper" id="login-success-wrapper">
+      <img src="../img/common/zhengque.png" />
+      <div style="margin-top:10px;">你的产品追溯档案已发送审核备案,请在用户中心中关注审核通知</div>
+      <div style="margin-top:10px;"><span class="success-number">5</span><span style="color:#15b2ec;">s</span>&nbsp;后自动跳转到用户中心页面</div>
+      <div style="padding:0;margin-top:10px;" class="col-lg-2 col-lg-offset-5 col-md-2 col-md-offset-5 col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3 quick-login back-button">
+        <a href="member_home.html" style="color:#FFF;">返回用户中心</a>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../common/js/set_timeout.js"></script>
+  <script src="../js/date/bootstrap-datetimepicker.min.js"></script>
+  <script src="../js/date/bootstrap-datetimepicker.zh-CN.js"></script>
+  <script src="../vendor/vue/vue.js"></script>
+  <script src="../common/js/commjs.js"></script>
+  <script src="../common/js/load_common_html.js"></script>
+  <script src="../common/js/util.js"></script>
+  <script src="../js/new_product2.js"></script>
+</body>
+
+</html>

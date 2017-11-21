@@ -1,0 +1,35 @@
+.enterpriseImage img:not(#pic){
+    width: 100%;
+    height: 165px;
+    max-height: 165px;
+    cursor: pointer;
+}
+.enterpriseNatural-image-wrapper{
+    position: relative;
+    border: 1px dashed #CCC;
+}
+
+.delete-icon{
+    position: absolute;
+    left: 92%;
+    top: -10px;
+}
+#company-natural-body>div{
+    background: #f5f7fa;
+}
+/* 图片放大 */
+#pic{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 5px;
+    z-index: 1;
+}
+.enterpriseNatural-name{
+    width: 100%;
+    color: #FFF;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}
