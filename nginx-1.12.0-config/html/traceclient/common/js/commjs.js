@@ -3,16 +3,16 @@
 const httpIp = 'http://10.88.20.84';
 
 /* 端口8761 */
-const httpPort1 = '8761';
+const httpPort1 = '7010';
 
 /* 端口8763 */
-const httpPort3 = '8763';
+const httpPort3 = '7010';
 
 /* 端口8764 */
-const httpPort4 = '8764';
+const httpPort4 = '7010';
 
 /* 端口8765 */
-const httpPort5 = '8765';
+const httpPort5 = '7010';
 
 /* IP1 */
 const httpPath1 = httpIp + ':' + httpPort1;
